@@ -26,14 +26,14 @@ exports.run = async (bot, message, argumentos, arg_texto, chat) => {
  let desc = d.content
  
  let anunciar = new Discord.MessageEmbed()
- .setColor('RED')
+ .setColor('RANDOM')
  .setTitle(title)
  .setDescription(desc)
- .setFooter("Anúncio feito por: "+message.author.username, message.author.displayAvatarURL({size: 32}))
+ .setFooter("Anúncio feito pelo(a) "+message.author.username, message.author.displayAvatarURL({size: 32}))
  
  bot.channels.cache.get(channel.id).send(anunciar) 
  
- message.channel.send("Anúncio enviado ao canal <#"+channel.id+"> com sucesso!")
+ message.channel.send("**Anúncio enviado ao canal <#"+channel.id+"> com sucesso!**")
  
  })
  }) 
