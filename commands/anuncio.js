@@ -10,7 +10,7 @@ exports.run = async (bot, message, argumentos, arg_texto, chat) => {
  let channel = c.mentions.channels.first()
  if(!channel) {
  
- message.channel.send("como você não mencionou um canal, decidi cancelar o anuncio, você acha que sou palhaça é?! :rage:")
+ message.channel.send("**como você não mencionou um canal, decidi cancelar o anuncio, você acha que sou palhaça é?!** :rage:")
  
  } else {
  
