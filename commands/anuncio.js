@@ -4,13 +4,13 @@ exports.run = async (bot, message, argumentos, arg_texto, chat) => {
  
  if(!message.member.permissions.has("ADMINISTRATOR"))return message.channel.send("Somente ADMS podem usar este comando!")
  
- message.channel.send("Onde você quer enviar a mensagem?").then(msg1 => {
+ message.channel.send("Onde você quer enviar a mensagem? **mencione um canal!**").then(msg1 => {
  let canal = message.channel.createMessageCollector(c => c.author.id === message.author.id, {max: 1})
  .on('collect', c => {
  let channel = c.mentions.channels.first()
  if(!channel) {
  
- message.channel.send("Mencione um canal!")
+ message.channel.send("como você não mencionou um canal, decidi cancelar o anuncio, você acha que sou palhaça é?! :rage:")
  
  } else {
  
