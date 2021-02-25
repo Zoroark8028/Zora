@@ -32,3 +32,4 @@ client.on('message', message => {
 });
 
 client.login(process.env.TOKEN); //Ligando o Bot caso ele consiga acessar o token
+console.log('zora está online')
