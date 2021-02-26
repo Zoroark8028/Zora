@@ -8,9 +8,9 @@ module.exports.run = async (client, message, args) => {
  .setDescription(`
 
 **Moderativos**
-anuncio
+`/`anuncio
  
 **Informativos**
-ping,uptime,sicon(servericon),userinfo`)
+ping,uptime,servericon,userinfo,botinfo`)
  message.channel.send(embed)
 }
