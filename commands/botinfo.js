@@ -6,13 +6,15 @@ module.exports.run = async (client, message, args) => {
  .setColor("#ff0000")
  .setTitle("Informações sobre a Zora Natasha!")
  .setDescription(`
- Oie, sou um simples bot brasileiro, que estou tentando mudar o discord deixando os servidores mais vivos!
+Oie, sou um simples bot brasileiro, que estou tentando mudar o discord deixando os servidores mais vivos!
+
+Criador: **Zoroark#8028**
 
 Prefixo: **z.**
 
 Programada em **Discord.js**
 
-Criador: **Zoroark#8028**
+Latencia: **${Math.round(client.ws.ping)}ms**
 
 Hospedada na [Glitch](https://glitch.com)
 
