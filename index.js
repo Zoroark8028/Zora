@@ -12,6 +12,20 @@ const Discord = require("discord.js"); //Conexão com a livraria Discord.js
 const client = new Discord.Client(); //Criação de um novo Client
 const config = require("./config.json"); //Pegando o prefixo do bot para respostas de comandos
 
+client.on("ready", () => {
+  let activities = [
+      `Utilize ${config.prefix}ajuda para ver meus comandos!`,
+      `${client.guilds.cache.size} servidores fofinhos!`,
+      `${client.users.cache.size} membros!`
+    ],
+    i = 0;
+  setInterval( () => client.user.setActivity(`${activities[i++ % activities.length]}`, {
+        type: "WATCHING"
+      }), 1000 * 60); 
+  client.user
+      .setStatus("indle")
+      });
+
 client.on('message', message => {
      if (message.author.bot) return;
      if (message.channel.type == 'dm') return;
