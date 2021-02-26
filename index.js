@@ -19,8 +19,10 @@ let avatar = [
 ],
 i = 0;
 setInterval( () => client.user.setAvatar(`${avatar[i++ % avatar.length]}`, {
-}), 1000 * 60)
+}), 1000 * 60);
+ console.log(`[AVATAR MUDADO] mudei meu avatar`)
 });
+
          
 client.on("ready", () => {
     let activities = [
