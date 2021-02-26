@@ -8,14 +8,16 @@ module.exports.run = async (client, message, args) => {
  .setDescription(`
  Oie, sou um simples bot brasileiro, que estou tentando mudar o discord deixando os servidores mais vivos!
 
+Prefixo: **z.**
+
 Programada em **Discord.js**
 
-Criador: ``Zoroark:
+Criador: **Zoroark#8028**
 
 Hospedada na [Glitch](https://glitch.com)
 
+Comando de ajuda: **z.help**`)
 
-`)
-
+message.channel.send(embed)
 
  }
