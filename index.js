@@ -13,13 +13,16 @@ const client = new Discord.Client(); //Criação de um novo Client
 const config = require("./config.json"); //Pegando o prefixo do bot para respostas de comandos
 
 client.on("ready", () => {
-let avatar 
-
-
-});
-
+let avatar = [
+`https://cdn.glitch.com/93d6f45a-a737-47e8-8966-31894015e729%2F78801ae9-1e40-431e-b311-6c8e0b10f9ca.image.png?v=1614371274275`,  
+`https://cdn.glitch.com/93d6f45a-a737-47e8-8966-31894015e729%2F8806f87f-be13-4dd9-a60a-ccf686d37348.image.png?v=1614371381738`  
+],
+i = 0;
+setInterval( () => client.user.setAvatar(`${avatar[i++ % avatar.length]}`, {
+}), 10000 * 60)
+                                        
 client.on("ready", () => {
-  let activities = [
+    let activities = [
       `Utilize ${config.prefix}ajuda para ver meus comandos!`,
       `Videos Do PauloCraft!`,
       `Caçando bot do Dogão no Brawl Stars!`,
