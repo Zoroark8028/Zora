@@ -8,7 +8,7 @@ module.exports.run = async (client, message, args) => {
  .setDescription(`
 
 **Moderativos**
-`/`anuncio
+anuncio
  
 **Informativos**
 ping,uptime,servericon,userinfo,botinfo`)
