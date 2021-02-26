@@ -16,7 +16,8 @@ client.on("ready", () => {
   let activities = [
       `Utilize ${config.prefix}ajuda para ver meus comandos!`,
       `Videos Do PauloCraft!`,
-      `Caçando bot do cachorro no Brawl Stars!`
+      `Caçando bot do Dogão no Brawl Stars!`,
+      `"Dirigindo a ZoraFiat do canal ZoraStars"!` 
     ],
     i = 0;
   setInterval( () => client.user.setActivity(`${activities[i++ % activities.length]}`, {
