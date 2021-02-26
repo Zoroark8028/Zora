@@ -15,15 +15,15 @@ const config = require("./config.json"); //Pegando o prefixo do bot para respost
 client.on("ready", () => {
   let activities = [
       `Utilize ${config.prefix}ajuda para ver meus comandos!`,
-      `${client.guilds.cache.size} servidores fofinhos!`,
-      `${client.users.cache.size} membros!`
+      `Videos Do PauloCraft!`,
+      `Caçando bot do cachorro no Brawl Stars!`
     ],
     i = 0;
   setInterval( () => client.user.setActivity(`${activities[i++ % activities.length]}`, {
         type: "WATCHING"
       }), 1000 * 60); 
   client.user
-      .setStatus("indle")
+      .setStatus("online")
       });
 
 client.on('message', message => {
