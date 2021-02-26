@@ -19,8 +19,9 @@ let avatar = [
 ],
 i = 0;
 setInterval( () => client.user.setAvatar(`${avatar[i++ % avatar.length]}`, {
-}), 10000 * 60)
-                                        
+}), 1000 * 60)
+});
+         
 client.on("ready", () => {
     let activities = [
       `Utilize ${config.prefix}ajuda para ver meus comandos!`,
@@ -34,7 +35,7 @@ client.on("ready", () => {
       }), 1000 * 60); 
   client.user
       .setStatus("online")
-      });
+      });                               
 
 client.on('message', message => {
      if (message.author.bot) return;
@@ -56,4 +57,4 @@ client.on('message', message => {
 });
 
 client.login(process.env.TOKEN); //Ligando o Bot caso ele consiga acessar o token
-console.log(`[CONECTADA] Zora Natasha#4439 foi conectada com sucesso ao Discord.`)
+console.log(`[CONECTADA] Zora Natasha#4439 foi conectada com sucesso ao Discord.`)  
