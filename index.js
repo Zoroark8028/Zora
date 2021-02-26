@@ -13,6 +13,12 @@ const client = new Discord.Client(); //Criação de um novo Client
 const config = require("./config.json"); //Pegando o prefixo do bot para respostas de comandos
 
 client.on("ready", () => {
+let avatar 
+
+
+});
+
+client.on("ready", () => {
   let activities = [
       `Utilize ${config.prefix}ajuda para ver meus comandos!`,
       `Videos Do PauloCraft!`,
