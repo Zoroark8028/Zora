@@ -15,11 +15,12 @@ const config = require("./config.json"); //Pegando o prefixo do bot para respost
 client.on("ready", () => {
 let avatar = [
 `https://cdn.glitch.com/93d6f45a-a737-47e8-8966-31894015e729%2F78801ae9-1e40-431e-b311-6c8e0b10f9ca.image.png?v=1614371274275`,  
-`https://cdn.glitch.com/93d6f45a-a737-47e8-8966-31894015e729%2F8806f87f-be13-4dd9-a60a-ccf686d37348.image.png?v=1614371381738`  
+`https://cdn.glitch.com/93d6f45a-a737-47e8-8966-31894015e729%2F8806f87f-be13-4dd9-a60a-ccf686d37348.image.png?v=1614371381738`,
+`https://cdn.glitch.com/93d6f45a-a737-47e8-8966-31894015e729%2F9a79cc19-82f8-4c35-9772-2009aba4e4d1.image.png?v=1614373229732`
 ],
 i = 0;
 setInterval( () => client.user.setAvatar(`${avatar[i++ % avatar.length]}`, {
-}), 1000 * 60);
+}), 5000 * 60);
  console.log(`[AVATAR MUDADO] mudei meu avatar`)
 });
 
