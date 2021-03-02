@@ -61,3 +61,10 @@ client.on('message', message => {
 
 client.login(process.env.TOKEN); //Ligando o Bot caso ele consiga acessar o token
 console.log(`[CONECTADA] Zora Natasha#4439 foi conectada com sucesso ao Discord.`)  
+
+client.on('message', (message) => {
+  if (message.mentions.has(client.user.id)) {
+    message.reply(`Opa lindo, meu prefixo é **z.**, e me chamo **Zora Natasha**, se precisar de ajuda use **z.ajuda**! `)
+    return
+  };
+});
