@@ -62,9 +62,3 @@ client.on('message', message => {
 client.login(process.env.TOKEN); //Ligando o Bot caso ele consiga acessar o token
 console.log(`[CONECTADA] Zora Natasha#4439 foi conectada com sucesso ao Discord.`)  
 
-client.on('message', (message) => {
-  if (message.content.includes('<@!803373957738528778>')) {
-    message.reply(`a`)
-    return
-  };
-});
