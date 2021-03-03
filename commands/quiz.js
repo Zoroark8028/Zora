@@ -1,14 +1,20 @@
 const { MessageEmbed } = require("discord.js");
 let questions = [
-  {
+{
+    title: "Qual o Bot mais Famoso?",
+    options: ["Loritta", "Rythm", "Mee6", "Groovy", "UnbelievaBoat"],
+    correct: 1,
+  },  
+
+{
     title: "Qual o Melhor Bot?",
     options: ["Zora", "Zector", "Ractor", "Zorinho"],
     correct: 1,
   },
    {
     title: "Qual o mais famoso?",
-    options: ["Nelipe Feto", "Xuxa", "Enaldinho", "Loritta", "Péle"],
-   correct: 5,
+    options: ["Nelipe Feto", "Enaldinho", "Loritta", "Péle"],
+   correct: 4,
  }, 
     {
     title: "Qual o jogo com mais downloads no Mundo?",
