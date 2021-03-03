@@ -15,6 +15,6 @@ ping,uptime,servericon,userinfo
 botinfo,serverinfo,avatar
 
 **Utilitarios**
-convidar`)
+convidar,zora`)
  message.channel.send(embed)
 }
