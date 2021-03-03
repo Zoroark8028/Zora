@@ -19,7 +19,7 @@ module.exports.run = async (client, message, args) => {
        .setColor("#ff0000")
  .setTitle("Zora Responde!")
  .setDescription(`Para: ${message.author.tag},
-**${response}**`)
+<:hihihi:763836612114513930> | **${response}**`)
 if(!args[0]) return message.reply("Por favor coloque uma pergunta");
 
 message.channel.send(embed)
