@@ -11,6 +11,10 @@ module.exports.run = async (client, message, args) => {
 anuncio
  
 **Informativos**
-ping,uptime,servericon,userinfo,botinfo`)
+ping,uptime,servericon,userinfo
+botinfo,serverinfo,avatar
+
+**Utilitarios**
+convidar`)
  message.channel.send(embed)
 }

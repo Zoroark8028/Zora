@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) => {
  .setColor("#ff0000")
  .setTitle("Informações sobre a Zora Natasha!")
  .setDescription(`
-Oie, sou um simples bot brasileiro, que tem as mesmas coisas de outros bots. 
+Oie, sou uma simples bot brasileira, que tem as mesmas coisas de outros bots. 
 
 <:lanchando:760219665933795409> Criador: **Zoroark#8028**
 
