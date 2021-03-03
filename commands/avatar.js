@@ -6,23 +6,7 @@ exports.run = async (client, message, args) => {
   
   let avatar = user.avatarURL({ dynamic: true, format: "png", size: 1024 });
 
-        let responses = [
-        "Yes",
-        "No",
-        "Definetly",
-        "Absoloutely",
-        "Not in a million years",
-      ];
-      let response =
-        responses[Math.floor(Math.random() * responses.length - 1)];
-      let Embed = new MessageEmbed()
-        .setTitle(`8Ball!`)
-        .setDescription(`Your question: ${question}\nMy reply: ${response}`)
-        .setColor(`RANDOM`);
-      message.channel.send(Embed);
-    }
-  },
-};
+  let embed = new Discord.MessageEmbed() 
     .setColor(`#ff0000`) 
     .setTitle(`Avatar de ${user.username}`) 
 .setDescription(`Que avatar fofo!`)
