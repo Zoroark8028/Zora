@@ -18,7 +18,7 @@ if (!args[0]) return message.channel.send(`Usagem Certa
     )
       return message.channel.send(
         `Usagem Correta:
-        **z.sorteio 10m/10h/10d**!`
+        **z.sorteio 10m/10h/10d {canal onde será realizado o sorteio} {premio}**!`
       );
     if (isNaN(args[0][0])) return message.channel.send(`Isso não é um número`);
     let channel = message.mentions.channels.first();
