@@ -36,7 +36,7 @@ if (!args[0]) return message.channel.send(`Usagem Certa
 **Para participar clique no emoji abaixo e aguarde o resultado**`  
         
       )
-      .setFooter(`Resultado em`) 
+      .setFooter(`Resultado:`) 
 .setTimestamp(Date.now() + ms(args[0]))
       .setColor(`BLUE`);
     let m = await channel.send(Embed);
