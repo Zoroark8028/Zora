@@ -1,6 +1,10 @@
 const Discord = require('discord.js')
 
-module.ex
+module.exports.run = async (client, message, args) => {
+
+ let question = message.content.slice(message.length + 6);
+    if (!question);
+
  let responses = [
         "Sim",
         "Não",
@@ -13,8 +17,8 @@ module.ex
       const embed = new Discord.MessageEmbed()
        .setColor("#ff0000")
  .setTitle("8ball")
- .setDescription(`${response}`)ports.run = async (client, message, args) => {
-if(!args[1]) return message.reply("Por favor coloque uma pergunta");
+ .setDescription(`''${!question}'', ${response}`)
+if(!args[0]) return message.reply("Por favor coloque uma pergunta");
 
 message.channel.send(embed)
 }
