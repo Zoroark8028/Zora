@@ -11,7 +11,7 @@ exports.run = async (client, message, args) => {
     .setTitle(`Avatar de ${user.username}`) 
 .setDescription(`Que avatar fofo!`)
     .setImage(avatar) 
-    .setFooter(`:camera_with_flash: ・ Autor: ${message.author.tag}`, message.author.displayAvatarURL({format: "png"}));
+    .setFooter(`・ Autor(a): ${message.author.tag}`, message.author.displayAvatarURL({format: "png"}));
  await message.channel.send(embed); 
 
 };
