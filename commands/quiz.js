@@ -2,12 +2,12 @@ const { MessageEmbed } = require("discord.js");
 let questions = [
   {
     title: "Melhor Bot",
-    options: [""],
+    options: ["Zora", "Zector", "Ractor", "Zorinho"],
     correct: 1,
   },
   {
-    title: "Best NPM package",
-    options: ["int.engine", "ms", "ws", "discord.js"],
+    title: "Qual o jogo com mais downloads no Mundo?",
+    options: ["Minecraft", "Free Fire", "Subway Surfers", "discord.js"],
     correct: 3,
   },
 ];
