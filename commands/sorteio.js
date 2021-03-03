@@ -6,14 +6,15 @@ module.exports = {
   usage: "<time> <channel> <prize>",
   category: "fun",
   run: async (bot, message, args) => {
-    if (!args[0]) return message.channel.send(`Usagem Certa **z.sorteio {numero para acabar}m/h/m {canal onde será realizado o sorteio} {premio}!`);
+    if (!args[0]) return message.channel.send(`Usagem Certa 
+**z.sorteio {minutos/horas/dias para acabar}m/h/m {canal onde será realizado o sorteio} {premio}**!`);
     if (
       !args[0].endsWith("d") &&
       !args[0].endsWith("h") &&
       !args[0].endsWith("m")
     )
       return message.channel.send(
-        `Você não usou o formato certo de tempo.!`
+        `exemplo: z.sorteio 10m/10h/10d!`
       );
     if (isNaN(args[0][0])) return message.channel.send(`Isso não é um número`);
     let channel = message.mentions.channels.first();
@@ -27,7 +28,9 @@ module.exports = {
     let Embed = new MessageEmbed()
       .setTitle(`Novo Sorteio!`)
       .setDescription(
-        `O usuario ${message.author} está patrocinando o sorteio com o premio: **${prize}**`
+        `O usuario ${message.author} está patrocinando o 
+sorteio com o premio: **${prize}**`
+        
       )
       .setTimestamp(Date.now() + ms(args[0]))
       .setColor(`BLUE`);
@@ -47,7 +50,7 @@ module.exports = {
         .random();
       channel.send(
         `E o vencedor do premio: **${prize}** é o... ${winner}!`
-      );
+      ); 
     }, ms(args[0]));
   },
 };
