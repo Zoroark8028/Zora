@@ -10,8 +10,8 @@ module.exports.run = async (client, message, args) => {
         "<:lanchando:760219665933795409>・Que tal você ir estudar?",
         "<:Bibi_Raiva:807663391144935484>・Não, Não,Não",
 "<:Shelly_Bruxa_Feliz:807667755885133884>・Zora Aprova!",
-   "・Faz sentido.",
-            "・hm, pensando bem, eu nunca pensei nisto!"];
+   "<:El_Brown_Amor:807662132048035840>・Faz sentido.",
+            "<:Rico_Assustado:807655918606090281>・hm, pensando bem, eu nunca pensei nisto!"];
       let response =
         responses[Math.floor(Math.random() * responses.length - 1)];
       const embed = new Discord.MessageEmbed()
