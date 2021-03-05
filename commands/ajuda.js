@@ -8,13 +8,13 @@ module.exports.run = async (client, message, args) => {
  .setDescription(`
 
 **Moderativos**
-anuncio
+anuncio,sorteio 
  
 **Informativos**
 ping,uptime,servericon,userinfo
 botinfo,serverinfo,avatar
 
 **Utilitarios**
-convidar,zora`)
+convidar,zora,quiz`)
  message.channel.send(embed)
 }
