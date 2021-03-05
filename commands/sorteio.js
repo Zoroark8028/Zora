@@ -20,23 +20,23 @@ if (!args[0]) return message.channel.send(`Usagem Certa
         `Usagem Correta:
         **z.sorteio 10m/10h/10d {canal onde será realizado o sorteio} {premio}**!`
       );
-    if (isNaN(args[0][0])) return message.channel.send(`Isso não é um número`);
+    if (isNaN(args[0][0])) return message.channel.send(`**Isso não é um número, tá me fazendo de palhaça, é?!** :rage:`);
     let channel = message.mentions.channels.first();
     if (!channel)
       return message.channel.send(
-        `Eu não achei o canal no server `
+        `Eu não achei o canal no server, mencione um canal existente! `
       );
     let prize = args.slice(2).join(" ");
-    if (!prize) return message.channel.send(`Sem premio especificado`);
+    if (!prize) return message.channel.send(`Sem premio especificado, por favor, tente novamente!`);
     message.channel.send(`**Sorteio criado em ${channel}**`);
     let Embed = new MessageEmbed()
       .setTitle(`Novo Sorteio!`)
       .setDescription(
-        `Novo Sorteio! com o premio: **${prize}**
+        `Novo Sorteio Rolando! Com o premio: **${prize}**
 **Para participar clique no emoji abaixo e aguarde o resultado**`  
         
       )
-      .setFooter(`Resultado:`) 
+      .setFooter(`Resultado Em:`) 
 .setTimestamp(Date.now() + ms(args[0]))
       .setColor(`BLUE`);
     let m = await channel.send(Embed);
@@ -54,7 +54,7 @@ if (!args[0]) return message.channel.send(`Usagem Certa
         .users.cache.filter((u) => !u.bot)
         .random();
       channel.send(
-        `E o vencedor do premio: **${prize}** é o... ${winner}!`
+        `:tada: | E o vencedor do Sorteio "**${prize}**"" é o... **${winner}!** Parabéns!`
       ); 
     }, ms(args[0]));
   },
