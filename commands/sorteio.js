@@ -30,9 +30,10 @@ if (!args[0]) return message.channel.send(`Usagem Certa
     if (!prize) return message.channel.send(`Sem premio especificado, por favor, tente novamente!`);
     message.channel.send(`**Sorteio criado em ${channel}**`);
     let Embed = new MessageEmbed()
-      .setTitle(`Novo Sorteio!`)
+      .setTitle(`Uau・Novo Sorteio!`)
       .setDescription(
-        `Novo Sorteio Rolando! Com o premio: **${prize}**
+        `:tada:・Novo Sorteio Rolando! Com o premio: **${prize}**!
+
 **Para participar clique no emoji abaixo e aguarde o resultado**`  
         
       )
@@ -54,7 +55,7 @@ if (!args[0]) return message.channel.send(`Usagem Certa
         .users.cache.filter((u) => !u.bot)
         .random();
       channel.send(
-        `:tada: | E o vencedor do Sorteio "**${prize}**"" é o... **${winner}!** Parabéns!`
+        `:tada:・E o vencedor do Sorteio "**${prize}**"" é o... **${winner}!** Parabéns!`
       ); 
     }, ms(args[0]));
   },
