@@ -8,19 +8,19 @@ module.exports = {
     async run (client, message, args) {
         let user = message.author;
         let timeout = 86400000;
-        let amount = 500;
+        let amount = 100;
 
         let daily = await db.fetch(`daily_${message.guild.id}_${user.id}`);
 
         if(daily !== null && timeout - (Date.now() - daily) > 0){
             let time = ms(timeout - (Date.now() - daily));
 
-            return message.channel.send(`Você ja coletou seu daily de hoje, resgate denovo em: ${time.hours}horas , ${time.minutes}minutos e ${time.seconds}s`)
+            return message.channel.send(`Você ja coletou seu daily de hoje, resgate denovo em: **${time.hours}horas , ${time.minutes}minutos e ${time.seconds}segundos**`)
         } else {
             db.add(`money_${message.guild.id}_${user.id}`, amount);
             db.set(`daily_${message.guild.id}_${user.id}`, Date.now());
 
-            message.channel.send(`Successfully added ${amount} coins to your account`)
+            message.channel.send(`Você recebeu **${amount} ZoraMoedas** em seu daily!`)
         }
     }
 }
