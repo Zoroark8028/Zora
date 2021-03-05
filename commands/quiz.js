@@ -6,10 +6,9 @@ let questions = [
     correct: 2,
   },  
 {
-    title: "Ataque que o Goku mais usa",
-    options: ["Zoroark#0000", "Zoroark#0001", "Zoroark#0066", "Zoroark#4564", "Zoroark#8028"],
-    correct: 5,
-
+    title: "Aaa razor shuri....",
+    options: ["sengan", "susanoo", "ken"],
+    correct: 3, 
 },
 {
     title: "Qual meu criador?(eza é facil)",
