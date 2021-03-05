@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args) => {
    "<:El_Brown_Amor:807662132048035840>・Faz sentido.",
             "<:Rico_Assustado:807655918606090281>・hm, pensando bem, eu nunca pensei nisto!",
 "<:tatonamesa:758494052777197608>・Tome agua, Hidrata-se!",
-"<:stonks:690245363566903333>・Dinheiro não faz felicidade, por que m  ",'a'];
+"<:stonks:690245363566903333>・Dinheiro não faz felicidade, por que minha felicidade é você!",":zap:・Incrível! ",'a'];
       let response =
         responses[Math.floor(Math.random() * responses.length - 1)];
       const embed = new Discord.MessageEmbed()
