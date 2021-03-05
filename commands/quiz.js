@@ -12,7 +12,7 @@ let questions = [
 },
 {
     title: "Qual meu criador?(eza é facil)",
-    options: ["Zoroark#0000", "Zoroark#0001", "Zoroark#0066", "Zoroark#4564", "Zoroark#8028"],
+    options: ["zoroark#0000", "zoroark#0001", "zoroark#8028", "Zoroark#4564", "Zoroark#8028"],
     correct: 5,
 
 },
