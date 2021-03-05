@@ -3,7 +3,7 @@ let questions = [
 {
     title: "Qual o Bot mais Famoso?",
     options: ["Loritta", "Rythm", "Mee6", "Groovy", "UnbelievaBoat"],
-    correct: 1,
+    correct: 2,
   },  
 
 {
