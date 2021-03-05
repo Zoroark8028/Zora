@@ -17,8 +17,9 @@ module.exports.run = async (client, message, args) => {
       const embed = new Discord.MessageEmbed()
        .setColor("#ff0000")
  .setTitle("Zora Responde!")
- .setDescription(`Para: ${message.author.tag},
-**${response}**`)
+ .setDescription(`Pergunta: **${args.join(' ')}**
+
+Resposta: **${response}**`)
 if(!args[0]) return message.reply("<:Bibi_Raiva:807663391144935484> | Por favor, coloque uma pergunta");
 
 message.channel.send(embed)
