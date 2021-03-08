@@ -6,9 +6,9 @@ module.exports.run = async (client, message, args) => {
  .setColor("#ff0000")
  .setTitle("Informações sobre a Zora Natasha!")
  .setDescription(`
-Oie, sou uma simples bot brasileira, que tem as mesmas coisas de outros bots. 
+Oie, sou uma simples bot brasileira, o resto você conheçe.  
 
-<:lanchando:760219665933795409> Criador: **Zoroark#8028**
+Criador: **Zoroark#8028**
 
 Para me adicionar [Clique Aqui](https://discord.com/api/oauth2/authorize?client_id=803373957738528778&permissions=2048&scope=bot) 
 
@@ -18,11 +18,9 @@ Programada em **Javascript**
 
 Libraria: **Discord.js**
 
-Latencia: **${Math.round(client.ws.ping)}ms**
-
 Hospedada na [Glitch](https://glitch.com)
 
-Comando de ajuda: **z.ajuda**`)
+Comando de ajuda: "**z.ajuda**"`)
 
 message.channel.send(embed)
 
