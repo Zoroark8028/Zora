@@ -64,56 +64,14 @@ client.login(process.env.TOKEN); //Ligando o Bot caso ele consiga acessar o toke
 console.log(`[CONECTADA] Zora Natasha#4439 foi conectada com sucesso ao Discord.`)  
 
 client.on('message', message => {
-    if (message.content === 'me da criador' ) {
-        message.channel.send('**Sabia que o quanto mais você pede criador, mas o meu gatinho fica triste?** Então Não peça criador.');
+    if (message.content === '<@!803373957738528778>') {
+        message.channel.send(':zap: | Oie, meu prefixo aqui é **z.** , se precisar de qualquer ajuda, utilize **z.ajuda**');
     }
 });
 
 client.on('message', message => {
-    if (message.content === 'me dá criador') {
-        message.channel.send('**Sabia que o quanto mais você pede criador, mas o meu gatinho fica triste?** Então Não peça criador.');
-    }
-});
-
-client.on('message', message => {
-    if (message.content === 'Me dá criador') {
-        message.channel.send('**Sabia que o quanto mais você pede criador, mas o meu gatinho fica triste?** Então Não peça criador.');
-    }
-});
-
-client.on('message', message => {
-    if (message.content === 'Me da criador') {
-        message.channel.send('**Sabia que o quanto mais você pede criador, mas o meu gatinho fica triste?** Então Não peça criador.');
-    }
-});
-
-client.on('message', message => {
-    if (message.content === 'medá criador') {
-        message.channel.send('**Sabia que o quanto mais você pede criador, mas o meu gatinho fica triste?** Então Não peça criador.');
-    }
-});
-
-client.on('message', message => {
-    if (message.content === 'meda criador') {
-        message.channel.send('**Sabia que o quanto mais você pede criador, mas o meu gatinho fica triste?** Então Não peça criador.');
-    }
-});
-
-    client.on('message', message => {
-    if (message.content === 'mida criador') {
-        message.channel.send('**Sabia que o quanto mais você pede criador, mas o meu gatinho fica triste?** Então Não peça criador.');
-    }
-});
-
-client.on('message', message => {
-    if (message.content === '@!803373957738528778') {
-        message.channel.send(':zap:| Oie, meu prefixo aqui é z. , se precisar de qualquer ajuda, utilize z.ajuda**');
-    }
-});
-
-client.on('message', message => {
-    if (message.content === '@803373957738528778') {
-        message.channel.send(':zap:| Oie, meu prefixo aqui é z. , se precisar de qualquer ajuda, utilize z.ajuda');
+    if (message.content === '<@803373957738528778>') {
+        message.channel.send(':zap: | Oie, meu prefixo aqui é **z.** , se precisar de qualquer ajuda, utilize **z.ajuda**');
     }
 });
 
