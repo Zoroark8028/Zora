@@ -65,13 +65,13 @@ console.log(`[CONECTADA] Zora Natasha#4439 foi conectada com sucesso ao Discord.
 
 client.on('message', message => {
     if (message.content === '<@!803373957738528778>') {
-        message.channel.send(':zap: | Oie, meu prefixo aqui é **z.** , se precisar de qualquer ajuda, utilize **z.ajuda**');
+        message.channel.send(':zap: ・ Oie, meu prefixo aqui é **z.** , se precisar de qualquer ajuda, utilize **z.ajuda**');
     }
 });
 
 client.on('message', message => {
     if (message.content === '<@803373957738528778>') {
-        message.channel.send(':zap: | Oie, meu prefixo aqui é **z.** , se precisar de qualquer ajuda, utilize **z.ajuda**');
+        message.channel.send(':zap: ・ Oie, meu prefixo aqui é **z.** , se precisar de qualquer ajuda, utilize **z.ajuda**');
     }
 });
 
