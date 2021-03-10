@@ -3,7 +3,7 @@ const moment = require('moment');
 moment.locale('pt-br')
 
 const regions = {
-	brazil: 'Brazil',
+	brazil: 'Brasil',
 	europe: 'Europe',
 	hongkong: 'Hong Kong',
 	india: 'India',
