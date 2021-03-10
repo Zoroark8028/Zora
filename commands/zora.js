@@ -2,7 +2,6 @@ const Discord = require('discord.js')
 
 module.exports.run = async (client, message, args) => {
 
-
   let responses = [
         "<:hihihi:763836612114513930>・Sim",
         "<:Leon_Shark_Triste:807662645326905366>・Não",
@@ -26,3 +25,4 @@ if(!args[0]) return message.reply("<:Bibi_Raiva:807663391144935484> | Por favor,
 
 message.channel.send(embed)
 }
+

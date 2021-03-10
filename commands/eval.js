@@ -12,7 +12,7 @@ exports.run = async (client, message, args) => {
  let code = args.join(' ')
 try {
 let ev = eval(code)
-message.channel.send('**Resultado** `\n'+ev+'`')
+message.channel.send('\n'ev+'')
 } catch(err) {
 message.channel.send('**Errou baby** `\n'+err+'`')
 }
