@@ -31,7 +31,24 @@ let questions = [
     options: ["Minecraft", "Free Fire", "Subway Surfers", "Cod Mobile"],
     correct: 1,
   },
+
+{
+    title: "Se eu pudesse escolher um bolo, qual seria?",
+    options: ["Eu lá vou saber", "Bolo Rosa", "Bolo de Sorvete", "Bolo de chocolate"],
+    correct: 2,
+  },
+
+ {
+    title: "Meu Irmão é o...",
+    options: ["Zorinho, claro", "Zector", "ZoRoArK", "Nau tem, tu é um bot "],
+    correct: 1,
+  },
 ];
+
+
+
+
+
 module.exports = {
   name: "trivia",
   description: "Test your knowledge!",
@@ -49,7 +66,7 @@ module.exports = {
       )
       .setColor(`GREEN`)
       .setFooter(
-        `Responda essa mensagem com a resposta correta, você só tem 15 segundos`
+        `Responda essa mensagem com o Número da opção correta, você só tem 15 segundos`
       );
     message.channel.send(Embed);
     try {
@@ -58,9 +75,9 @@ module.exports = {
         { time: 15000, max: 1, errors: ["time"] }
       );
       if (parseInt(msgs.first().content) == q.correct) {
-        return message.channel.send(`Está resposta está correta!`);
+        return message.channel.send(`:tada: ・ Parabéns! Está resposta está correta!`);
       } else {
-        return message.channel.send(`Opa, você errou!`);
+        return message.channel.send(`:x: ・ Opa! Você errou!`);
       }
     } catch (e) {
       return message.channel.send(`Você não respondeu!`);
