@@ -80,7 +80,7 @@ module.exports = {
         return message.channel.send(`:x: ・ Opa! Você errou!`);
       }
     } catch (e) {
-      return message.channel.send(`Você não respondeu!`);
+      return message.channel.send(`:timer: ・ Você não respondeu!`);
     }
   },
 };
