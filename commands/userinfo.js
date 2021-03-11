@@ -10,24 +10,9 @@ module.exports = {
   run: async (client, message, args) => {
 
 
-    let user;
-
-    if (!args[0]) {
-      user = message.member;
-    } else {
-
-
-      if (isNaN(args[0])) return message.channel.send(":x: opa opa opa, não detecto menções, desculpe :cry:")
-
-
      let user = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;
-
-    }
-
-    if (!user) {
-      return message.channel.send(":x: Não consegui encontrar esse usuario.")
-    }
-
+   
+        
     let embed = new MessageEmbed()
       .setThumbnail(user.user.displayAvatarURL({ dynamic: true }))
 
