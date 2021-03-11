@@ -46,7 +46,7 @@ module.exports = {
       embed.setAuthor(user.user.tag, user.user.displayAvatarURL({ dynamic: true }))
 
       //CHECK IF USER HAVE NICKNAME
-      if (user.nickname !== null) embed.addField("Nome", user.nickname)
+      if (user.nickname !== null) embed.addField("Apelido No Server", user.nickname)
       embed.addField("Conta Criada em:", moment(user.user.createdAt).format("LLLL"))
 .addField("Entrou Aqui Em:",moment(user.joinedAt).format("LLLL"))
         .addField("Informações",`**ID**: \`${user.user.id}\`\n**Tag**: \`${user.user.discriminator}\``)
