@@ -20,7 +20,8 @@ module.exports = {
       if (isNaN(args[0])) return message.channel.send(":x: opa opa opa, não detecto menções, desculpe :cry:")
 
 
-      user = message.mentions.members.first() || await message.guild.members.fetch(args[0]).catch(err => { return message.channel.send(":x: Não consegui encontrar esse usuario") })
+     let user = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;
+
     }
 
     if (!user) {
@@ -62,7 +63,8 @@ module.exports = {
       //CHECK IF USER HAVE NICKNAME
       if (user.nickname !== null) embed.addField("Nome", user.nickname)
       embed.addField("Conta Criada em:", moment(user.user.createdAt).format("LLLL"))
-        .addField("Informações", `**ID**: \`${user.user.id}\`\n**Tag**: \`${user.user.discriminator}\``)
+.addField("Entrou Aqui Em:",moment(user.joinedAt).format("LLLL"))
+        .addField("Informações",`**ID**: \`${user.user.id}\`\n**Tag**: \`${user.user.discriminator}\``)
 
       return message.channel.send(embed).catch(err => {
         return message.channel.send("Erro : " + err)
