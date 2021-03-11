@@ -8,9 +8,9 @@ app.get("/", (request, response) => {
 });
 app.listen(process.env.PORT); // Recebe solicitações que o deixa online
 
-const Discord = require("discord.js"); //Conexão com a livraria Discord.js
-const client = new Discord.Client(); //Criação de um novo Client
-const config = require("./config.json"); //Pegando o prefixo do bot para respostas de comandos
+const Discord = require("discord.js"); 
+const client = new Discord.Client(); 
+const config = require("./config.json"); 
 
 client.on("ready", () => {
 let avatar = [
@@ -60,7 +60,7 @@ client.on('message', message => {
   }
 });
 
-client.login(process.env.TOKEN); //Ligando o Bot caso ele consiga acessar o token
+client.login(process.env.TOKEN); 
 console.log(`[CONECTADA] Zora Natasha#4439 foi conectada com sucesso ao Discord.`)  
 
 client.on('message', message => {
