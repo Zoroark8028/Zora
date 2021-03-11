@@ -1,5 +1,11 @@
 const { MessageEmbed } = require("discord.js");
 let questions = [
+
+{ 
+ title: "Qual a minha libraria?/",
+    options: ["Python", "Dbscript", "Eris", "Discord.js", "Dbd.js"],
+    correct: 4,
+  },  
 {
     title: "Qual o Bot mais Famoso?",
     options: ["Loritta", "Rythm", "Mee6", "Groovy", "UnbelievaBoat"],
@@ -64,7 +70,7 @@ module.exports = {
           return `${i} - ${opt}\n`;
         })
       )
-      .setColor(`GREEN`)
+      .setColor(`ff0000`)
       .setFooter(
         `Responda essa mensagem com o Número da opção correta, você só tem 15 segundos`
       );
