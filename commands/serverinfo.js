@@ -44,7 +44,7 @@ module.exports = {
 			.addField('Geral', [
 				`**Nome:** ${message.guild.name}`,
 				`**ID:** ${message.guild.id}`,
-								`**Região Do Servidor:** ${regions[message.guild.region]}`,
+					`**Região Do Servidor:** ${regions[message.guild.region]}`,
 				`**Nível de impulso:** ${message.guild.premiumTier ? `Tier ${message.guild.premiumTier}` : 'None'}`,
 				`**Nível de verificação:** ${verificationLevels[message.guild.verificationLevel]}`,
 				`⌛ **Tempo criado:** ${moment(message.guild.createdTimestamp).format('LL')}, ${moment(message.guild.createdTimestamp).fromNow()}`,
