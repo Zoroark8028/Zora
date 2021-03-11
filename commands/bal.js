@@ -7,7 +7,8 @@ module.exports = {
 
     async run (client, message, args) {
 
-        let user = message.mentions.users.first() || message.author || message.ids.users.first();
+let user = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;
+   
 
         let bal = await db.fetch(`zm_${message.guild.id}_${user.id}`);
         if(bal === null) bal = 0;
