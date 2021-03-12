@@ -15,6 +15,6 @@ ping,uptime,servericon,userinfo
 botinfo,serverinfo,avatar
 
 **Utilitarios**
-convidar,zora,quiz`)
+<:lanchando:760219665933795409> ・ convidar,zora,quiz`)
  message.channel.send(embed)
 }

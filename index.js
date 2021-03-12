@@ -11,7 +11,7 @@ app.listen(process.env.PORT); // Recebe solicitações que o deixa online
 const Discord = require("discord.js"); 
 const client = new Discord.Client(); 
 const config = require("./config.json"); 
-
+    
 client.on("ready", () => {
 let avatar = [
 `https://cdn.glitch.com/93d6f45a-a737-47e8-8966-31894015e729%2F240e2116-1c26-40c8-ba0a-6556f9cb97cd.image.png?v=1614706766742`,  
