@@ -32,7 +32,7 @@ if (!args[0]) return message.channel.send(`Usagem Certa
     let Embed = new MessageEmbed()
       .setTitle(`Uau・Novo Sorteio!`)
       .setDescription(
-        `:tada:・Novo Sorteio Rolando! Com o premio: **${prize}**!
+        `:tada:・Novo Sorteio Rolando! \n\n Com o premio: **${prize}**!
 
 **Para participar clique no emoji abaixo e aguarde o resultado**`  
         
@@ -44,7 +44,6 @@ if (!args[0]) return message.channel.send(`Usagem Certa
     m.react("🎉");
     setTimeout(() => {
       if (m.reactions.cache.get("🎉").count <= 1) {
-        message.channel.send(`Reação: ${m.reactions.cache.get("🎉").count}`);
         return message.channel.send(
           `Sem pessoas o suficiente para haver um vencedor.`
         ); 

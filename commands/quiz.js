@@ -81,12 +81,12 @@ module.exports = {
         { time: 15000, max: 1, errors: ["time"] }
       );
       if (parseInt(msgs.first().content) == q.correct) {
-        return message.channel.send(`:tada: ・ Parabéns! Está resposta está correta!`);
+        return message.channel.send(`:tada: ・${message.author} , Parabéns! Está resposta está correta!`);
       } else {
-        return message.channel.send(`:x: ・ Opa! Você errou!`);
+        return message.channel.send(`:x: ・ ${message.author} , Opa! Você errou! Use o comando novamente e tente denovo!`);
       }
     } catch (e) {
-      return message.channel.send(`:timer: ・ Você não respondeu!`);
+      return message.channel.send(`:timer: ・ ${message.author} , Você não respondeu!`);
     }
   },
 };
