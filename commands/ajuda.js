@@ -8,10 +8,10 @@ module.exports.run = async (client, message, args) => {
  .setDescription(`
 
 **Moderativos**
-anuncio,sorteio 
+<:hihihi:763836612114513930> ・ anuncio,sorteio 
  
 **Informativos**
-ping,uptime,servericon,userinfo
+<:742756936050671706:771911635924418590> ・ ping,uptime,servericon,userinfo
 botinfo,serverinfo,avatar
 
 **Utilitarios**
