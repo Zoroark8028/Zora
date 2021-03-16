@@ -25,4 +25,3 @@ if(!args[0]) return message.reply("<:Bibi_Raiva:807663391144935484> | Por favor,
 
 message.channel.send(embed)
 }
-

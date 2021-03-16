@@ -18,3 +18,4 @@ botinfo,serverinfo,avatar
 <:lanchando:760219665933795409> ・ convidar,zora,quiz`)
  message.channel.send(embed)
 }
+
