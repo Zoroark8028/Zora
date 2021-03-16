@@ -4,8 +4,8 @@ const Discord = require('discord.js');
 exports.run = async (client, message, args) => {
 
  let embed = new Discord.MessageEmbed()
- .setColor("#ff0000")
- .setDescription("**Ícone do servidor**")
+ .setColor("BLUE")
+ .setDescription("**<:stonks:690245363566903333> | Ícone do servidor **")
  .setImage(message.guild.iconURL({ dynamic: true, format: 'png', size: 1024}))
 
  message.channel.send(embed);
