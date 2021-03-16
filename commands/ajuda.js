@@ -10,12 +10,15 @@ module.exports.run = async (client, message, args) => {
 **Moderativos**
 <:hihihi:763836612114513930> ・ anuncio,sorteio 
  
+**Economia**
+<:stonks:690245363566903333> ・ bal, money, daily 
+
 **Informativos**
-<:742756936050671706:771911635924418590> ・ ping,uptime,servericon,userinfo
-botinfo,serverinfo,avatar
+<:742756936050671706:771911635924418590> ・ ping, uptime, servericon, userinfo
+botinfo, serverinfo, avatar
 
 **Utilitarios**
-<:lanchando:760219665933795409> ・ convidar,zora,quiz`)
+<:lanchando:760219665933795409> ・ convidar, zora, quiz`)
  message.channel.send(embed)
 }
 

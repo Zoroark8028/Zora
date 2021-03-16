@@ -7,12 +7,12 @@ module.exports = {
 
     async run (client, message, args) {
 
-let user = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;
+let user = message.member;
 
         let bal = await db.fetch(`zm_${message.guild.id}_${user.id}`);
         if(bal === null) bal = 0;
 
-       message.channel.send(`${user}, tem **${bal} ZoraMoedas**`)  
+       message.channel.send(`${user}, você tem **${bal} ZoraMoedas**`)  
     
     }
 }
