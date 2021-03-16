@@ -4,13 +4,13 @@ moment.locale('pt-br')
 
 const regions = {
 	brazil: 'Brasil',
-	europe: 'Europe',
+	europe: 'Europa',
 	hongkong: 'Hong Kong',
 	india: 'India',
-	japan: 'Japan',
+	japan: 'Japão',
 	russia: 'Russia',
-	singapore: 'Singapore',
-	southafrica: 'South Africa',
+	singapore: 'Singapora',
+	southafrica: 'Africa do Norte',
 	sydeny: 'Sydeny',
 	'us-central': 'US Central',
 	'us-east': 'US East',
