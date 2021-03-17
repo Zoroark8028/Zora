@@ -6,11 +6,11 @@ module.exports.run = async (client, message, args) => {
  .setColor("#ff0000")
  .setTitle("Informações sobre a Zora Natasha!")
  .setDescription(`
-Oie, sou uma simples bot brasileira, o resto você conheçe.  
+🔷 | Oie, sou uma simples bot brasileira, o resto você conheçe.  
 
 Criador: **Zoroark#8028**
 
-Server de Suporte: [Clique Aqui](https://discord.gg/2JYGWjqY)
+🔷 | Server de Suporte: [Clique Aqui](https://discord.gg/epUJV7b45X)
 
 Para me adicionar [Clique Aqui](https://discord.com/api/oauth2/authorize?client_id=803373957738528778&permissions=2048&scope=bot) 
 
