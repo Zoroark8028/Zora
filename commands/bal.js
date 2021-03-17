@@ -3,6 +3,7 @@ const Discord = require('discord.js');
 
 module.exports = {
     name: "bal",
+aliases: "atm",
     description: "bleh",
 
     async run (client, message, args) {
