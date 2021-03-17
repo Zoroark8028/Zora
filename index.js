@@ -9,6 +9,25 @@ const Discord = require("discord.js");
 const client = new Discord.Client(); 
 const config = require("./config.json"); 
     
+client.on("guildMemberAdd", async (member) => { 
+
+  let guild = await client.guilds.cache.get("821563484617572352");
+  let channel = await client.channels.cache.get("821563484617572355");
+    if (guild != member.guild) {
+    return console.log("boas vindas funcionando");
+   } else {
+      let embed = await new Discord.MessageEmbed()
+      .setColor("#7c2ae8")
+      .setAuthor(member.user.tag, member.user.displayAvatarURL())
+      .setTitle(`Bem Vindo!`)
+            .setDescription(`**${member.user}**, bem-vindo(a) ao servidor da Zora!`)
+      .setThumbnail(member.user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }))
+            .setTimestamp();
+
+    channel.send(embed);
+  }
+});
+
 client.on("ready", () => {
 let avatar = [
 `https://cdn.glitch.com/93d6f45a-a737-47e8-8966-31894015e729%2F9a79cc19-82f8-4c35-9772-2009aba4e4d1.image.png?v=1614373229732`,  
