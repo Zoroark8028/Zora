@@ -10,6 +10,8 @@ Oie, sou uma simples bot brasileira, o resto você conheçe.
 
 Criador: **Zoroark#8028**
 
+Server de Suporte: [Clique Aqui](https://discord.gg/2JYGWjqY)
+
 Para me adicionar [Clique Aqui](https://discord.com/api/oauth2/authorize?client_id=803373957738528778&permissions=2048&scope=bot) 
 
 Prefixo: **z.**
