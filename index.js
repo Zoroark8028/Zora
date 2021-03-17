@@ -41,8 +41,6 @@ client.on("ready", () => {
       .setStatus("online")
       });                               
 
-client.aliases = new Discord.Collection()
-
 client.on('message', message => {
      if (message.author.bot) return;
      if (message.channel.type == 'dm') return;
@@ -58,16 +56,8 @@ client.on('message', message => {
         const commandFile = require(`./commands/${command}.js`)
         commandFile.run(client, message, args);
     } catch (err) {
-   console.error('Erro:' + err);
- 
-        client.commands.set(commandName, command);
-
-        if (command.aliases) {
-            command.aliases.forEach(alias => {
-                client.aliases.set(alias, command);
-            });
-        };
-    };
+    console.error('Erro:' + err);
+  }
 });
 
 client.login(process.env.TOKEN); 
