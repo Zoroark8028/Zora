@@ -4,13 +4,13 @@ module.exports.run = async (client, message, args) => {
 
  const embed = new Discord.MessageEmbed()
  .setColor("#ff0000")
- .setTitle("Lista de comandos")
+ .setTitle("Moderação, o que os comandos fazem?")
  .setDescription(`
-z.anuncio - **Anuncie um evento/novidade usando esse comando!**
+**z.anuncio** \n Anuncie um evento/novidade usando esse comando!
 
-z.sorteio - **Faça um sorteio usando o template, ""
-
+**z.sorteio** \n Faça um sorteio usando o template, "z.sorteio 10m/10h/10d #canal-do-sorteio {premio}  
 `)
+.setFooter('Os {} são argumentos! Não utilize os no comando!')
 
  message.channel.send(embed)
 }
