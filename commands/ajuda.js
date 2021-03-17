@@ -18,7 +18,7 @@ module.exports.run = async (client, message, args) => {
 botinfo, serverinfo, avatar
 
 **Miscelania**
-<:lanchando:760219665933795409> ・ convidar, zora, quiz`)
+<:lanchando:760219665933795409> ・ suporte, convidar, zora, quiz`)
  message.channel.send(embed)
 }
 
