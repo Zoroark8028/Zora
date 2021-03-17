@@ -7,7 +7,7 @@ module.exports.run = async (client, message, args) => {
  .setTitle("Lista de comandos")
  .setDescription(`
 
-**Moderativos**{z.moderação}
+**Moderativos** - {z.moderação}
 <:hihihi:763836612114513930> ・ anuncio,sorteio 
  
 **Economia**
