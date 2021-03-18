@@ -23,8 +23,17 @@ z.pay {menção} {quantidade}`);
  
   if (!args[1]) {
       return message.channel.send(embed2)
-  }
-  let embed3 = new Discord.MessageEmbed()
+  
+}
+  let embed8 = new Discord.MessageEmbed()
+  .setColor("#FFFFFF")
+  .setDescription(`Você não pode se mencionar!`);
+
+  if (message.content.includes(`<@!${user.author}>`, `<@${user.author}>`)) { 
+      return message.channel.send(embed8)
+
+}
+    let embed3 = new Discord.MessageEmbed()
   .setColor("#FFFFFF")
   .setDescription(`Você não pode usar dinheiro negativo!`);
 
