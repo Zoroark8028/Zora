@@ -5,6 +5,8 @@ const ms = require("parse-ms");
 module.exports.run = async (bot, message, args) => {
   if(!message.content.startsWith('z.'))return;  
 
+if (isNaN(args[1[1)) return message.channel.send(`**Isso não é um número, tá me fazendo de palhaça, é?!** :rage:`)
+ 
   let user = message.mentions.members.first() 
 
   let member = db.fetch(`zm_${message.guild.id}_${message.author.id}`)
@@ -23,14 +25,6 @@ z.pay {menção} {quantidade}`);
  
   if (!args[1]) {
       return message.channel.send(embed2)
-  
-}
-  let embed8 = new Discord.MessageEmbed()
-  .setColor("#FFFFFF")
-  .setDescription(`Você não pode se mencionar!`);
-
-  if (message.content.includes(`<@!${user.author}>`, `<@${user.author}>`)) { 
-      return message.channel.send(embed8)
 
 }
     let embed3 = new Discord.MessageEmbed()
@@ -55,7 +49,6 @@ z.pay {menção} {quantidade}`);
   message.channel.send(embed5)
   db.add(`zm_${message.guild.id}_${user.id}`, args[1])
   db.subtract(`zm_${message.guild.id}_${message.author.id}`, args[1])
-
 }
 
 module.exports.help = {
