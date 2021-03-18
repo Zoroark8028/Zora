@@ -1,22 +1,20 @@
 const Discord = require('discord.js')
 const db = require('quick.db')
 
-module.exports.run = async (bot, message, args) => {
+module.exports.run = async (client, message, args) => {
 
-let user = message.mentions.members.first() || message.author
-let money = db.startsWith(`money_${user.id}_${message.guild.id}`, { sort: '.data' })
-let content = "";
-
+var money = await db.all(`zm_${message.guild.id}`, { sort: ".data" });
+    
+let resp = "";
 for (let i = 0; i < money.length; i++) {
-    let user = bot.users.get(money[i].ID.split('_')[1]).username
-
-    content += `${i+1}. ${user} ~ ${money[i].data} snb\n`
+    let user = client.users.cache.get(money[i].ID.split("_")[1]);
+    resp += `${i + 1}. ${user} - ${money[i].data}$\n`;
 }
+    
+ const embed = new Discord.MessageEmbed()
+.setTitle("Informações")
+.setDescription(`resp
 
-const embed = new Discord.RichEmbed()
-.setAuthor(`${message.guild.name} - Top players!`, message.guild.iconURL)
-.setDescription(content)
-.setColor(2686950)
-
+`)
 message.channel.send(embed)
 }
