@@ -13,7 +13,7 @@ for (let i = 0; i < money.length; i++) {
     
  const embed = new Discord.MessageEmbed()
 .setTitle("Informações")
-.setDescription(`resp
+.setDescription(`${resp} 
 
 `)
 message.channel.send(embed)
