@@ -27,6 +27,14 @@ module.exports.run = async (bot, message, args) => {
 if (isNaN(args[1][1])) return message.channel.send(`**Isso não é um número, tá me fazendo de palhaça, é?!** :rage:`)
 
 }
+    let embed8 = new Discord.MessageEmbed()
+  .setColor("RED")
+  .setDescription(`*Você não pode se mencionar!*`);
+
+  if (message.content.includes(`<@!${message.author.id}`)) { 
+      return message.channel.send(embed8)
+
+}
     let embed3 = new Discord.MessageEmbed()
   .setColor("RED")
   .setDescription(`*Você não pode usar dinheiro negativo!*`);
@@ -44,7 +52,7 @@ if (isNaN(args[1][1])) return message.channel.send(`**Isso não é um número, t
 
   let embed5 = new Discord.MessageEmbed()
   .setColor("GREEN")
-  .setDescription(`Você deu **${args[1]} ZoraMoedas** para ${user.user.username}.`);
+  .setDescription(`${message.author.username} deu **${args[1]} ZoraMoedas** para ${user.user.username}.`);
 
   message.channel.send(embed5)
   db.add(`zm_${message.guild.id}_${user.id}`, args[1])
