@@ -3,7 +3,7 @@ const db = require("quick.db");
 const ms = require("parse-ms");
 
 module.exports.run = async (bot, message, args) => {
-  if(!message.content.startsWith('z.'))return;  
+ if(!['803363145921462272'].includes(message.author.id)) return;  
 
   let user = message.mentions.members.first() 
 
