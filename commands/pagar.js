@@ -19,7 +19,7 @@ module.exports.run = async (bot, message, args) => {
   let embed2 = new Discord.MessageEmbed()
   .setColor("RED")
   .setDescription(`Usagem Correta
-**z.pay {menção} {quantidade}**`);
+**z.pagar {menção} {quantidade}**`);
  
   if (!args[1]) {
       return message.channel.send(embed2)

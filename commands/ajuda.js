@@ -11,7 +11,7 @@ module.exports.run = async (client, message, args) => {
 <:hihihi:763836612114513930> ・ anuncio,sorteio 
  
 **Economia**
-<:stonks:690245363566903333> ・ bal, money, daily, pay  
+<:stonks:690245363566903333> ・ atm, money, daily, pagar  
 
 **Informativos**
 <:742756936050671706:771911635924418590> ・ ping, uptime, servericon, userinfo
