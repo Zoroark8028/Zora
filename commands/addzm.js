@@ -25,6 +25,21 @@ module.exports.run = async (bot, message, args) => {
       return message.channel.send(embed2)
 
 if (isNaN(args[1][1])) return message.channel.send(`**Isso não é um número, tá me fazendo de palhaça, é?!** :rage:`)
+
+}
+    let embed3 = new Discord.MessageEmbed()
+  .setColor("RED")
+  .setDescription(`*Você não pode usar dinheiro negativo!*`);
+
+  if (message.content.includes('-')) { 
+      return message.channel.send(embed3)
+  }
+  let embed4 = new Discord.MessageEmbed()
+  .setColor("RED")
+  .setDescription(`*Você não tem ZoraMoedas o suficiente!*`);
+
+  if (member < args[1]) {
+      return message.channel.send(embed4)
   }
 
   let embed5 = new Discord.MessageEmbed()
