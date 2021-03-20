@@ -2,12 +2,12 @@ const Discord = require("discord.js");
 const db = require("quick.db");
 const ms = require("parse-ms");
 
-module.exports.run = async (bot, message, args) => {
+module.exports.run = async (client, message, args) => {
  if(!['803363145921462272'].includes(message.author.id)) return;  
 
   let user = message.mentions.members.first() 
 
-  let member = db.fetch(`zm_${message.guild.id}_${message.author.id}`)
+let member = db.fetch(`zm_${message.guild.id}_${message.author.id}`)
 
    let embed = new Discord.MessageEmbed()
   .setColor("GREEN")
