@@ -15,12 +15,12 @@ module.exports = {
         if(daily !== null && timeout - (Date.now() - daily) > 0){
             let time = ms(timeout - (Date.now() - daily));
 
-            return message.channel.send(`Você ja coletou seu daily de hoje, resgate denovo em: **${time.hours} horas , ${time.minutes} minutos e ${time.seconds} segundos**`)
+            return message.channel.send(`:x: **|** ${message.author}, você ja coletou seu daily de hoje, resgate denovo em: **${time.hours} horas , ${time.minutes} minutos e ${time.seconds} segundos.**`)
         } else {
             db.add(`zm_${message.guild.id}_${user.id}`, amount);
             db.set(`daily_${message.guild.id}_${user.id}`, Date.now());
 
-            message.channel.send(`Você recebeu **${amount} ZoraMoedas** em seu daily!`)
+            message.channel.send(`✅ **|** {message.author}, você recebeu **${amount} ZoraMoedas** em seu daily!`)
         }
     }
 }
