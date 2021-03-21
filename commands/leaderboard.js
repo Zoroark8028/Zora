@@ -16,6 +16,6 @@ let money = db.all().filter(data => data.ID.startsWith(`money`)).sort((a, b) => 
         const embed = new Discord.MessageEmbed()
         .setAuthor(`${message.guild.name}`, message.guild.iconURL({ dynamic: true }))
         .setColor("#ff0000")
-        .addField(`Leaderboards`, finalLb, false)
+        .addField(`Top Burgueses de ZoraMoedas`, finalLb, false)
         message.channel.send(embed);
 }
