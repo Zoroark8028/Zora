@@ -5,10 +5,10 @@ module.exports.run = async (client, message, args) => {
 
  let user = message.mentions.users.first() || client.users.cache.get(args[0]) || message.author;
 
-let zm = db.all().filter(data => data.ID.startsWith(`zm`)).sort((a, b) => b.data - a.data)
-        zm.length = 10;
+let money = db.all().filter(data => data.ID.startsWith(`money`)).sort((a, b) => b.data - a.data)
+        money.length = 10;
         let finalLb = "";
-        for (var i in zm) {
+        for (var i in money) {
           finalLb += `**${zm.indexOf(zm[i])+1}.**     <@${zm[i].ID.slice(25)}> - \`${zm[i].data} ZoraMoedas\`\n`;
         }
      
