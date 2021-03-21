@@ -11,7 +11,7 @@ let user = message.mentions.members.first() || message.guild.members.cache.get(a
    
       if (!args[0]) return message.channel.send(`Mencione um usuário!`)
 
-        let bal = await db.fetch(`zm_${message.guild.id}_${user.id}`);
+        let bal = await db.fetch(`money_${message.guild.id}_${user.id}`);
         if(bal === null) bal = 0;
 
        message.channel.send(`${user}, tem **${bal} ZoraMoedas**`)  
