@@ -5,7 +5,7 @@ const ms = require("parse-ms");
 module.exports.run = async (bot, message, args) => {
   if(!message.content.startsWith('z.'))return;  
 
-  let user = message.mentions.members.first() 
+ let user = message.mentions.users.first() || bot.users.cache.get(args[0])   
 
   let member = db.fetch(`zm_${message.guild.id}_${message.author.id}`)
 
