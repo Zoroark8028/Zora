@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
 
  let user = message.mentions.users.first() || bot.users.cache.get(args[0])   
 
-  let member = db.fetch(`zm_${message.guild.id}_${message.author.id}`)
+  let member = db.fetch(`money_${message.guild.id}_${message.author.id}`)
 
   let embed1 = new Discord.MessageEmbed()
   .setColor("RED")
@@ -47,8 +47,8 @@ if (isNaN(args[1])) return message.channel.send(`**Isso não é um número, tá 
   .setDescription(`${message.author.username} deu **${args[1]} ZoraMoedas** para ${user.user.username}.`);
 
   message.channel.send(embed5)
-  db.add(`zm_${message.guild.id}_${user.id}`, args[1])
-  db.subtract(`zm_${message.guild.id}_${message.author.id}`, args[1])
+  db.add(`money_${message.guild.id}_${user.id}`, args[1])
+  db.subtract(`money_${message.guild.id}_${message.author.id}`, args[1])
 }
 
 module.exports.help = {

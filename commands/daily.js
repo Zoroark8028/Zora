@@ -17,7 +17,7 @@ module.exports = {
 
             return message.channel.send(`<:742758255276720259:771911664172793856> **|** ${message.author}, você ja coletou seu daily de hoje, resgate denovo em: **${time.hours} horas , ${time.minutes} minutos e ${time.seconds} segundos.**`)
         } else {
-            db.add(`zm_${message.guild.id}_${user.id}`, amount);
+            db.add(`money_${message.guild.id}_${user.id}`, amount);
             db.set(`daily_${message.guild.id}_${user.id}`, Date.now());
 
             message.channel.send(`<:742756936050671706:771911635924418590> **|** ${message.author}, você recebeu **${amount} ZoraMoedas** em seu daily!`)
