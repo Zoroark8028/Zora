@@ -17,10 +17,6 @@ module.exports.run = async (bot, message, args, guilds) => {
       return message.channel.send(embed1)
 }
 
-if (message.content.includes( { 
-      return message.channel.send(embed3)
-
-  }
   let embed2 = new Discord.MessageEmbed()
   .setColor("RED")
   .setDescription(`Usagem Correta
