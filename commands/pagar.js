@@ -3,8 +3,7 @@ const db = require("quick.db");
 const ms = require("parse-ms");
 
 module.exports.run = async (bot, message, args, guilds) => {
-  if(!message.content.startsWith('z.'))return;  
-
+  
  let user = message.mentions.users.first() || message.guild.members.cache.get(args[0])
 
   let member = db.fetch(`money_${message.guild.id}_${message.author.id}`)
