@@ -25,11 +25,11 @@ const flags = {
 	VERIFIED_DEVELOPER: 'Verified Bot Developer'
 };
 
-    		const userFlags = user.flags.toArray();
-
+    	
     
      let user = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;
    
+	const userFlags = user.flags.toArray();
         
     let embed = new MessageEmbed()
       .setThumbnail(user.user.displayAvatarURL({ dynamic: true }))
@@ -67,7 +67,7 @@ const flags = {
       if (user.nickname !== null) embed.addField("Apelido No Server", user.nickname)
       embed.addField("Conta Criada em:", moment(user.user.createdAt).format("LLLL"))
 .addField("Entrou Aqui Em:",moment(user.joinedAt).format("LLLL"))
-        .addField("Informações",`**ID**: \`${user.user.id}\`\n**Tag**: \`${user.user.discriminator}\``)
+        .addField("Informações",`**ID**: \`${user.user.id}\`\n**Tag**: \`${user.user.discriminator}\`\n**Badges**${userFlags.length ? userFlags.map(flag => flags[flag]).join(', ') : 'Nenhuma'}`)
 
       return message.channel.send(embed).catch(err => {
         return message.channel.send("Erro : " + err)
