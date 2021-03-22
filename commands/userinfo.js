@@ -66,7 +66,7 @@ const flags = {
       if (user.nickname !== null) embed.addField("Apelido No Server", user.nickname)
       embed.addField("Conta Criada em:", moment(user.user.createdAt).format("LLLL"))
 .addField("Entrou Aqui Em:", moment(user.joinedAt).format("LLLL"))
-      .addField("Informações",`**ID**: \`${user.user.id}\`\n**Tag**: \`${user.user.discriminator}\` \n**S `)
+      .addField("Informações",`**ID**: \`${user.user.id}\`\n**Tag**: \`${user.user.discriminator}\` \n**Jogo** \`${user.presence.game || 'Não está jogando nada'}\``)
 
       return message.channel.send(embed).catch(err => {
         return message.channel.send("Erro : " + err)
