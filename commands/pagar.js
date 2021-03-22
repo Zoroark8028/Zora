@@ -5,7 +5,7 @@ const ms = require("parse-ms");
 module.exports.run = async (bot, message, args) => {
   if(!message.content.startsWith('z.'))return;  
 
- let user = message.mentions.users.first() || bot.users.cache.get(args[0])   
+ let user = message.mentions.users.first() || message.member;   
 
   let member = db.fetch(`money_${message.guild.id}_${message.author.id}`)
 
@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
   if (!args[1]) {
       return message.channel.send(embed2)
 
-if (isNaN(args[1])) return message.channel.send(`**Isso não é um número, tá me fazendo de palhaça, é?!** :rage:`);
+if (isNaN(!args[1])) return message.channel.send(`**Isso não é um número, tá me fazendo de palhaça, é?!** :rage:`);
 
 }
     let embed3 = new Discord.MessageEmbed()
@@ -41,10 +41,10 @@ if (isNaN(args[1])) return message.channel.send(`**Isso não é um número, tá 
   if (member < args[1]) {
       return message.channel.send(embed4)
   }
-
+  
   let embed5 = new Discord.MessageEmbed()
   .setColor("GREEN")
-  .setDescription(`${message.author.username} deu **${args[1]} ZoraMoedas** para ${user.user.username}.`);
+  .setDescription(`🔷 ・Sucesso, **${message.author.tag}** transferiu **${args[1]} ZoraMoedas** para ${user.tag}!`);
 
   message.channel.send(embed5)
   db.add(`money_${message.guild.id}_${user.id}`, args[1])
