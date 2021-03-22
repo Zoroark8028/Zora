@@ -25,6 +25,13 @@ module.exports.run = async (bot, message, args, guilds) => {
       return message.channel.send(embed2)
 
 }
+
+    const coinsToGive = args[1]
+    if (isNaN(coinsToGive)) {
+      message.reply('*Por favor, coloque um número valido!*')
+      return
+    
+}
     let embed3 = new Discord.MessageEmbed()
   .setColor("RED")
   .setDescription(`*Você não pode usar dinheiro negativo!*`);
