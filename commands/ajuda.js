@@ -8,7 +8,7 @@ module.exports.run = async (client, message, args) => {
  .setDescription(`
 
 **Moderativos** - {z.moderação}
-<:hihihi:763836612114513930> ・ anuncio,sorteio 
+<:hihihi:763836612114513930> ・ anuncio, sorteio 
  
 **Economia**
 <:stonks:690245363566903333> ・ atm, money, daily, pagar, leaderboard  

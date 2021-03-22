@@ -48,7 +48,7 @@ module.exports.run = async (bot, message, args, guilds) => {
   
   let embed5 = new Discord.MessageEmbed()
   .setColor("GREEN")
-  .setDescription(`🔷 ・**Sucesso**, **${message.author.tag}** transferiu **${args[1]} ZoraMoedas** para **${user.tag}**!`);
+  .setDescription(`🔷 ・ **Sucesso**, **${message.author.tag}** transferiu **${args[1]} ZoraMoedas** para **${user.tag}**!`);
 
   message.channel.send(embed5)
   db.add(`money_${message.guild.id}_${user.id}`, args[1])
