@@ -8,7 +8,7 @@ module.exports = {
     async run (client, message, args) {
         let user = message.author;
         let timeout =  43200000;
-        let amount = Math.floor(Math.random() * 100) + 1;
+        let amount = Math.floor(Math.random() * 300) + 20;
 
         let daily = await db.fetch(`daily_${message.guild.id}_${user.id}`);
 
