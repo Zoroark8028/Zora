@@ -29,8 +29,7 @@ const flags = {
     
      let user = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;
    
-	const userFlags = user.flags.toArray();
-        
+       
     let embed = new MessageEmbed()
       .setThumbnail(user.user.displayAvatarURL({ dynamic: true }))
 
@@ -66,8 +65,8 @@ const flags = {
       //CHECK IF USER HAVE NICKNAME
       if (user.nickname !== null) embed.addField("Apelido No Server", user.nickname)
       embed.addField("Conta Criada em:", moment(user.user.createdAt).format("LLLL"))
-.addField("Entrou Aqui Em:",moment(user.joinedAt).format("LLLL"))
-        .addField("Informações",`**ID**: \`${user.user.id}\`\n**Tag**: \`${user.user.discriminator}\`\n**Badges**${userFlags.length ? userFlags.map(flag => flags[flag]).join(', ') : 'Nenhuma'}`)
+.addField("Entrou Aqui Em:", moment(user.joinedAt).format("LLLL"))
+      .addField("Informações",`**ID**: \`${user.user.id}\`\n**Tag**: \`${user.user.discriminator}\` \n**S `)
 
       return message.channel.send(embed).catch(err => {
         return message.channel.send("Erro : " + err)
