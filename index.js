@@ -8,7 +8,8 @@ app.listen(3000)
 const Discord = require("discord.js"); 
 const client = new Discord.Client(); 
 const config = require("./config.json"); 
-    
+   
+
 client.on("ready", () => {
 let avatar = [
 `https://cdn.glitch.com/93d6f45a-a737-47e8-8966-31894015e729%2F9a79cc19-82f8-4c35-9772-2009aba4e4d1.image.png?v=1614373229732`,  
