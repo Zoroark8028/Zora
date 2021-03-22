@@ -9,6 +9,9 @@ const Discord = require("discord.js");
 const client = new Discord.Client(); 
 const config = require("./config.json"); 
    
+module.exports = (client) => {
+  console.log(`[SERVER] estou em ${client.guilds.size} servers!`);
+}
 
 client.on("ready", () => {
 let avatar = [
@@ -18,8 +21,7 @@ let avatar = [
 i = 0;
 setInterval( () => client.user.setAvatar(`${avatar[i++ % avatar.length]}`, {
 }), 5000 * 60);
- console.log(`[AVATAR MUDADO] mudei meu avatar`)
-});
+ });
 
          
 client.on("ready", () => {
@@ -53,8 +55,7 @@ client.on('message', message => {
         const commandFile = require(`./commands/${command}.js`)
         commandFile.run(client, message, args);
     } catch (err) {
-    console.error('Erro:' + err);
-  }
+     }
 });
 
 client.login(process.env.TOKEN); 
