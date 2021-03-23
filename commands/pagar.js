@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args, guilds) => {
   .setDescription(`**Mencione alguem!**`);
 
   if (!user) {
-      return message.channel.send(embed1)
+      return message.channel.send(`**Mencione alguem!**`)
 }
 
   let embed2 = new Discord.MessageEmbed()
@@ -22,7 +22,8 @@ module.exports.run = async (bot, message, args, guilds) => {
 **z.pagar {menção} {quantidade}**`);
  
  if (!args[1]) {
-      return message.channel.send(embed2)
+      return message.channel.send(`Usagem Correta
+**z.pagar {menção} {quantidade}**`)
 }
 
     const coinsToGive = args[1]
@@ -36,14 +37,14 @@ module.exports.run = async (bot, message, args, guilds) => {
   .setDescription(`*Você não pode usar dinheiro negativo!*`);
 
   if (message.content.includes('-')) { 
-      return message.channel.send(embed3)
+      return message.channel.send(`*Você não pode usar dinheiro negativo!*`)
   }
   let embed4 = new Discord.MessageEmbed()
   .setColor("RED")
   .setDescription(`*Você não tem ZoraMoedas o suficiente!*`);
 
   if (member < args[1]) {
-      return message.channel.send(embed4)
+      return message.channel.send(`*Você não tem ZoraMoedas o suficiente!*`)
   }
   
   let embed5 = new Discord.MessageEmbed()

@@ -1,3 +1,4 @@
+const Discord = require('discord.js')
 const db = require('quick.db');
 const ms = require('parse-ms');
 
@@ -20,7 +21,7 @@ module.exports = {
             db.add(`money_${message.guild.id}_${user.id}`, amount);
             db.set(`daily_${message.guild.id}_${user.id}`, Date.now());
 
-            message.channel.send(`<:742756936050671706:771911635924418590> **|** ${message.author}, você recebeu **${amount} ZoraMoedas** em seu daily!`)
+ message.channel.send(`<:742756936050671706:771911635924418590> **|** ${message.author}, você recebeu **${amount} ZoraMoedas** em seu daily!`)
         }
     }
 }
