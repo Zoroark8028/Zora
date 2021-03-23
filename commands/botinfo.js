@@ -8,21 +8,19 @@ module.exports.run = async (client, message, args) => {
  .setDescription(`
 🔷 **|** Oie, sou uma simples bot brasileira, o resto você conheçe.  
 
-Criador: **Zoroark#8028**
+<:hihihi:763836612114513930> **|** Prefixo: **z.**
+
+<:lanchando:760219665933795409> **|** Criador: **Zoroark#8028**
 
 :gem: **|** Server de Suporte: [Clique Aqui](https://discord.gg/epUJV7b45X)
 
 Para me adicionar [Clique Aqui](https://discord.com/api/oauth2/authorize?client_id=803373957738528778&permissions=2048&scope=bot) 
 
-Prefixo: **z.**
-
-Programada em **Javascript**
-
 Libraria: **Discord.js**
 
 Hospedada na [Glitch](https://glitch.com)
 
-Comando de ajuda: "**z.ajuda**"`)
+`)
 
 message.channel.send(embed)
 
