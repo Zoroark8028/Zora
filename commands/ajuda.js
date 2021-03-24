@@ -17,7 +17,7 @@ module.exports.run = async (client, message, args) => {
 <:742756936050671706:771911635924418590> ・ ping, uptime, servericon, userinfo
 botinfo, serverinfo, avatar
 
-**Miscelania**
+**Miscelânea**
 <:lanchando:760219665933795409> ・ suporte, convidar, zora, quiz`)
  message.channel.send(embed)
 
