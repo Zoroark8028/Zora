@@ -9,7 +9,13 @@ module.exports = {
 
 let user = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;
    
-      if (!args[0]) return message.channel.send(`Mencione um usuário!`)
+if ([args(0)]) {
+      return message.channel.send(`**Mencione um usuario!**`)
+}
+
+      if (!user) {
+      return message.channel.send(`**Mencione um usuario!**`)
+}
 
         let bal = await db.fetch(`money_${message.guild.id}_${user.id}`);
         if(bal === null) bal = 0;

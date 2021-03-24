@@ -26,12 +26,6 @@ module.exports.run = async (bot, message, args, guilds) => {
 **z.pagar {menção} {quantidade}**`)
 }
 
-   if (message.content.includes('0')) { 
-      return message.channel.send(`*Parabéns você pagou nada!*`)
-      
-}
-
-
     const coinsToGive = args[1]
     if (isNaN(coinsToGive)) {
       message.reply('*Por favor, coloque um número valido!*')
