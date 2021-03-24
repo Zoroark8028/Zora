@@ -9,7 +9,8 @@ const Discord = require("discord.js");
 const client = new Discord.Client(); 
 const config = require("./config.json"); 
    
-module.exports = (client) => {
+module.exports = 
+(client) => {
   console.log(`[SERVER] estou em ${client.guilds.size} servers!`);
 }
 
