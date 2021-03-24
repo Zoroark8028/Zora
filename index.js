@@ -14,6 +14,8 @@ module.exports =
   console.log(`[SERVER] estou em ${client.guilds.size} servers!`);
 }
 
+client.alias = new Discord.Collection();
+
 client.on("ready", () => {
 let avatar = [
 `https://cdn.glitch.com/93d6f45a-a737-47e8-8966-31894015e729%2F9a79cc19-82f8-4c35-9772-2009aba4e4d1.image.png?v=1614373229732`,  
@@ -59,6 +61,12 @@ client.on('message', message => {
      }
 });
 
+arqs.forEach((f, i) => {
+    let props = require(`./commands/${command}`)
+           props.alias.forEach(alias => {
+      bot.alias.set(alias, props.nome);
+    })
+
 client.login(process.env.TOKEN); 
 console.log(`[CONECTADA] Zora Natasha#4439 foi conectada com sucesso ao Discord.`)  
 
@@ -74,3 +82,4 @@ client.on('message', message => {
     }
 });
 
+});
