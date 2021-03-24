@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 
 exports.run = async (client, message, args) => {
- if(!['803363145921462272', '601473350619103235', '674656385656422411', '791639505757011969'].includes(message.author.id)) return;
+ if(!['803363145921462272', '601473350619103235', '674656385656422411', '791639505757011969', '583408510184718336'].includes(message.author.id)) return;
  
  let conteudo = args.join(" ");
  
