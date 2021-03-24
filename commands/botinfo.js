@@ -14,9 +14,9 @@ module.exports.run = async (client, message, args) => {
 
 :gem: **|** Server de Suporte: [Clique Aqui](https://discord.gg/epUJV7b45X)
 
-Para me adicionar [Clique Aqui](https://discord.com/api/oauth2/authorize?client_id=803373957738528778&permissions=2048&scope=bot) 
+<:mamaco:823080106619568140> **|** Para me adicionar [Clique Aqui](https://discord.com/api/oauth2/authorize?client_id=803373957738528778&permissions=2048&scope=bot) 
 
-Libraria: **Discord.js**
+:books: **|** Libraria: **Discord.js**
 
 Hospedada na [Glitch](https://glitch.com)
 
