@@ -61,9 +61,6 @@ client.on('message', message => {
      }
 });
 
-client.login(process.env.TOKEN); 
-console.log(`[CONECTADA] Zora Natasha#4439 foi conectada com sucesso ao Discord.`)  
-
 client.on('message', message => {
     if (message.content === '<@!803373957738528778>') {
         message.channel.send(':zap: ・ Oie, meu prefixo aqui é **z.** , se precisar de qualquer ajuda, utilize **z.ajuda**');
@@ -90,19 +87,34 @@ if (message.content === 'zoro gato') {
 }
 })
 
-bot.api.applications(bot.user.id).commands.post({
-  data: {
-    name: "commandname",
-    description: "Command Description",
-  },
+client.on('ready', () => {
+    client.api.applications(client.user.id).guilds(685646611472318484).commands.post({
+        data: {
+            name: "ping",
+            description: "pong"
+            // possible options here e.g. options: [{...}]
+        }
+    });
+
+
+    client.ws.on('INTERACTION_CREATE', async interaction => {
+        const command = interaction.data.name.toLowerCase();
+        const args = interaction.data.options;
+
+        if (command === 'teste'){ 
+            // here you could do anything. in this sample
+            // i reply with an api interaction
+            client.api.interactions(interaction.id, interaction.token).callback.post({
+                data: {
+                    type: 4,
+                    data: {
+                        content: "teste"
+                    }
+                }
+            })
+        }
+    });
 });
-bot.ws.on("INTERACTION_CREATE", async interaction => {
-bot.api.interactions(interaction.id, interaction.token).callback.post({
-  data: {
-    type: 3,
-    data: {
-      content: `I'm currently looking it up - it'll be directly messaged to you soon.`,
-    },
-  },
-});
-});
+
+client.login(process.env.TOKEN); 
+console.log(`[CONECTADA] Zora Natasha#4439 foi conectada com sucesso ao Discord.`)  
