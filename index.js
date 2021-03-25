@@ -75,7 +75,7 @@ client.on('message', message => {
     }
 });
 
-const
+const zorogai = 'zoro gay'
 
 client.on("message", message => {
  if (!message.content.toLowerCase().startsWith(zorogai.toLowerCase())) return; {
