@@ -26,7 +26,6 @@ setInterval( () => client.user.setAvatar(`${avatar[i++ % avatar.length]}`, {
 }), 5000 * 60);
  });
 
-         
 client.on("ready", () => {
     let activities = [
       `Utilize ${config.prefix}ajuda para ver meus comandos!`,
@@ -76,8 +75,16 @@ client.on('message', message => {
     }
 });
 
+const
+
 client.on("message", message => {
-if (message.content === 'zoro gai') {
+ if (!message.content.toLowerCase().startsWith(zorogai.toLowerCase())) return; {
 	message.react('<:reverse:818301358598914059>');
+}
+})
+
+client.on("message", message => {
+if (message.content === 'zoro gato') {
+	message.react('😘');
 }
 })
