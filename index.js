@@ -10,7 +10,8 @@ const client = new Discord.Client();
 const config = require("./config.json"); 
 const fs = require("fs")
 const db = require("quick.db")
-   
+const bot = new Discord.Client();    
+
 module.exports = 
 (client) => {
   console.log(`[SERVER] estou em ${client.guilds.size} servers!`);
@@ -88,3 +89,20 @@ if (message.content === 'zoro gato') {
 	message.react('😘');
 }
 })
+
+bot.api.applications(bot.user.id).commands.post({
+  data: {
+    name: "commandname",
+    description: "Command Description",
+  },
+});
+bot.ws.on("INTERACTION_CREATE", async interaction => {
+bot.api.interactions(interaction.id, interaction.token).callback.post({
+  data: {
+    type: 3,
+    data: {
+      content: `I'm currently looking it up - it'll be directly messaged to you soon.`,
+    },
+  },
+});
+});
