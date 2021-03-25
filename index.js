@@ -76,3 +76,8 @@ client.on('message', message => {
     }
 });
 
+client.on("message", message => {
+if (message.content === 'zoro gai') {
+	message.react('<:reverse:818301358598914059>');
+}
+})
