@@ -29,7 +29,7 @@ let questions = [
   },
    {
     title: "Qual o mais famoso?",
-    options: ["Nelipe Feto", "Enaldinho", "Loritta", "Péle"],
+    options: ["Nelipe Feto", "Enaldinho", "Loritta", "Pelé"],
    correct: 4,
  }, 
     {
@@ -70,7 +70,7 @@ module.exports = {
           return `${i} - ${opt}\n`;
         })
       )
-      .setColor(`ff0000`)
+      .setColor(`BLUE`)
       .setFooter(
         `Responda essa mensagem com o Número da opção correta, você só tem 15 segundos`
       );
