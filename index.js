@@ -73,48 +73,5 @@ client.on('message', message => {
     }
 });
 
-const zorogai = 'zoro gay'
-
-client.on("message", message => {
- if (!message.content.toLowerCase().startsWith(zorogai.toLowerCase())) return; {
-	message.react('<:reverse:818301358598914059>');
-}
-})
-
-client.on("message", message => {
-if (message.content === 'zoro gato') {
-	message.react('😘');
-}
-})
-
-client.on('ready', () => {
-    client.api.applications(client.user.id).guilds(685646611472318484).commands.post({
-        data: {
-            name: "ping",
-            description: "pong"
-            // possible options here e.g. options: [{...}]
-        }
-    });
-
-
-    client.ws.on('INTERACTION_CREATE', async interaction => {
-        const command = interaction.data.name.toLowerCase();
-        const args = interaction.data.options;
-
-        if (command === 'teste'){ 
-            // here you could do anything. in this sample
-            // i reply with an api interaction
-            client.api.interactions(interaction.id, interaction.token).callback.post({
-                data: {
-                    type: 4,
-                    data: {
-                        content: "teste"
-                    }
-                }
-            })
-        }
-    });
-});
-
 client.login(process.env.TOKEN); 
 console.log(`[CONECTADA] Zora Natasha#4439 foi conectada com sucesso ao Discord.`)  
