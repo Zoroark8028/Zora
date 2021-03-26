@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) => {
  .setColor("#ff0000")
  .setTitle("Economia, o que os comandos fazem?")
  .setDescription(`
-**z.daily** \n Pegue uma quantia diaria  de ZoraMoedas que varie de **20-300** ZoraMoedas
+**z.daily** \n Pegue uma quantia diaria  de ZoraMoedas que varie de **20-320** ZoraMoedas
 
 **z.atm** \n Verifica quantas ZoraMoedas **VOCÊ** tem
 
