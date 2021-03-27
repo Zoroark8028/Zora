@@ -18,7 +18,7 @@ module.exports.run = async (client, message, args) => {
 
 :books: **|** Libraria: **Discord.js**
 
-Hospedada na [Glitch](https://glitch.com)
+☪️ **|** Hospedada na [Glitch](https://glitch.com)
 
 `)
 
