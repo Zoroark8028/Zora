@@ -10,6 +10,8 @@ module.exports.run = async (client, message, args) => {
 
 **z.atm** \n Verifica quantas ZoraMoedas **VOCÊ** tem
 
+**z.pagar** \n Dê ZoraMoedas a um usuario, usando o template \n *z.pagar @user (quantidade)* 
+
 **z.money** \n Verifica quantas ZoraMoedas a **PESSOA** mencionada tem
 
 **z.leaderboard** \n Mostra o ranking das pessoas que mais tem ZoraMoeda no server  
