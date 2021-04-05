@@ -7,7 +7,7 @@ module.exports = {
   category: "fun",
   run: async (bot, message, args) => {
     
-if(!message.member.permissions.has("ADMINISTRATOR"))return message.channel.send("Somente ADMS podem usar este comando!")
+if(!message.member.permissions.has("ADMINISTRATOR"))return message.channel.send("Somente Pessoas com a permissão \`Administrador\` podem usar este comando!")
 
 if (!args[0]) return message.channel.send(`Usagem Certa 
 **z.sorteio {minutos/horas/dias para acabar}m/h/m {canal onde será realizado o sorteio} {premio}**!`);
