@@ -16,11 +16,13 @@ module.exports.run = async (client, message, args) => {
       let response =
         responses[Math.floor(Math.random() * responses.length - 1)];
       const embed = new Discord.MessageEmbed()
-       .setColor("#ff0000")
+    
+      .setColor("#ff0000")
  .setTitle("Zora Responde!")
  .setDescription(`Pergunta: **${args.join(' ')}**
 
 Resposta: **${response}**`)
+      .setFooter(`Autor(a) • ${message.author.tag}`)
 if(!args[0]) return message.reply("<:Bibi_Raiva:807663391144935484> | Por favor, coloque uma pergunta");
 
 message.channel.send(embed)
