@@ -12,9 +12,18 @@ const fs = require("fs")
 const db = require("quick.db")
 const bot = new Discord.Client();    
 
-module.exports = 
-(client) => {
-  console.log(`[SERVER] estou em ${client.guilds.size} servers!`);
+const subCommandACmds = fs.readdirSync('./commands/ajudas-diversão').filter(file => file.endsWith('.js'));
+
+for (const file of subCommandACmds) {
+    const command = require(`./commands/subCommandA/${file}`);
+    client.commands.set(command.name, command);
+}
+
+const subCommandBCmds = fs.readdirSync('./commands/economia').filter(file => file.endsWith('.js'));
+
+for (const file of subCommandBCmds) {
+    const command = require(`./commands/economia/${file}`);
+    client.commands.set(command.name, command);
 }
 
 client.on("ready", () => {
