@@ -53,14 +53,12 @@ client.on('message', message => {
         .trim().slice(config.prefix.length)
         .split(/ +/g);
 
+const commandName = args.shift().toLowerCase();
   const command = client.commands.get(commandName)
        || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 
    if (!command) return;
-
-    try {
-        const commandFile = require(`./commands/${commandName}.js`)
-        commandFile.run(client, message, args);
+	
     } catch (err) {
      }
 });
