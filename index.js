@@ -52,10 +52,14 @@ client.on('message', message => {
     const args = message.content
         .trim().slice(config.prefix.length)
         .split(/ +/g);
-    const command = args.shift().toLowerCase();
+
+  const command = client.commands.get(commandName)
+       || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+
+   if (!command) return;
 
     try {
-        const commandFile = require(`./commands/${command}.js`)
+        const commandFile = require(`./commands/${commandName}.js`)
         commandFile.run(client, message, args);
     } catch (err) {
      }
@@ -72,6 +76,9 @@ client.on('message', message => {
         message.channel.send(':zap: ・ Oie, meu prefixo é **z.** , se precisar de qualquer ajuda, utilize **z.ajuda**');
     }
 });
+
+client.aliases = new Discord.Collection()
+
 
 client.login(process.env.TOKEN); 
 console.log(`[CONECTADA] Zora Natasha#4439 foi conectada com sucesso ao Discord.`)  
