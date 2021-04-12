@@ -50,7 +50,7 @@ client.on('message', message => {
      if (message.content.startsWith(`<@!${client.user.id}>`) || message.content.startsWith(`<@${client.user.id}>`)) return;
 
     fs.readdir(`./commands/`, (error, files) => {
-    if (error) {return console.log(".");};
+    if (error) {return console.log("err");};
     files.forEach(file => {
         const command = require(`./commands/${file}`);
         const commandName = file.split(".")[0];
@@ -80,12 +80,4 @@ client.on('message', message => {
 client.login(process.env.TOKEN); 
 console.log(`[CONECTADA] Zora Natasha#4439 foi conectada com sucesso ao Discord.`)  
 
-client.ws.on('INTERACTION_CREATE', async interaction => {
-  // do stuff and respond here
-
-  client.api.interactions(interaction.id, interaction.token).callback.post({data: 
-{  type: 4, 
- data: {    content: 'ping pong!'  }}})
-  
-  
-  })
+});
