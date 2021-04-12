@@ -49,16 +49,20 @@ client.on('message', message => {
      if (!message.content.toLowerCase().startsWith(config.prefix.toLowerCase())) return;
      if (message.content.startsWith(`<@!${client.user.id}>`) || message.content.startsWith(`<@${client.user.id}>`)) return;
 
-    const args = message.content
-        .trim().slice(config.prefix.length)
-        .split(/ +/g);
-    const command = args.shift().toLowerCase();
+    fs.readdir(`./commands/`, (error, files) => {
+    if (error) {return console.log(".");};
+    files.forEach(file => {
+        const command = require(`./commands/${file}`);
+        const commandName = file.split(".")[0];
 
-    try {
-        const commandFile = require(`./commands/${command}.js`)
-        commandFile.run(client, message, args);
-    } catch (err) {
-     }
+        client.commands.set(commandName, command);
+
+        if (command.aliases) {
+            command.aliases.forEach(alias => {
+                client.aliases.set(alias, command);
+            });
+        };
+    });
 });
 
 client.on('message', message => {
