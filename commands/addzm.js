@@ -7,14 +7,14 @@ module.exports.run = async (bot, message, args) => {
 
   let user = message.mentions.members.first() || bot.users.cache.get(args[0])   
 
-  let member = db.fetch(`money_${message.guild.id}_${message.author.id}`)
+  let member = db.fetch(`money_${message.author.id}`)
 
    let embed = new Discord.MessageEmbed()
   .setColor("GREEN")
   .setDescription(`${message.author.username} deu **${args[1]} ZoraMoedas** para ${user.user.username}.`);
 
   message.channel.send(embed)
-  db.add(`money_${message.guild.id}_${user.id}`, args[1])
+  db.add(`money_${user.id}`, args[1])
 }
 
 module.exports.help = {

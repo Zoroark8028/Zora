@@ -10,7 +10,7 @@ aliases: "atm",
 
 let user = message.member;
 
-        let bal = await db.fetch(`money_${message.guild.id}_${user.id}`);
+        let bal = await db.fetch(`money_${user.id}`);
         if(bal === null) bal = 0;
 
 

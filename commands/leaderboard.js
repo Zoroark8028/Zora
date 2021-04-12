@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
 
  let user = message.mentions.users.first() || client.users.cache.get(args[0]) || message.author;
 
-let money = db.all().filter(data => data.ID.startsWith(`money_${message.guild.id}`)).sort((a, b) => b.data - a.data)
+let money = db.all().filter(data => data.ID.startsWith(`money_$`)).sort((a, b) => b.data - a.data)
         money.length = 10;
         let finalLb = "";
         for (var i in money) {
@@ -14,7 +14,6 @@ let money = db.all().filter(data => data.ID.startsWith(`money_${message.guild.id
      
         
         const embed = new Discord.MessageEmbed()
-        .setAuthor(`${message.guild.name}`, message.guild.iconURL({ dynamic: true }))
         .setColor("#ff0000")
         .addField(`<:lanchando:760219665933795409> **|** Top Burguêses de ZoraMoedas`, finalLb, false)
         message.channel.send(embed);

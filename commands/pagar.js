@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args, guilds) => {
   
  let user = message.mentions.users.first() || message.guild.members.cache.get(args[0])
 
-  let member = db.fetch(`money_${message.guild.id}_${message.author.id}`)
+  let member = db.fetch(`money_${message.author.id}`)
 
   let embed1 = new Discord.MessageEmbed()
   .setColor("RED")
@@ -54,8 +54,8 @@ module.exports.run = async (bot, message, args, guilds) => {
 
 
   message.channel.send(`🔷 ・ **Sucesso**, **${message.author}** transferiu **${args[1]} ZoraMoedas** para **${user}**!`)
-  db.add(`money_${message.guild.id}_${user.id}`, args[1])
-  db.subtract(`money_${message.guild.id}_${message.author.id}`, args[1])
+  db.add(`money_${user.id}`, args[1])
+  db.subtract(`money_${message.author.id}`, args[1])
 }
 
 module.exports.help = {

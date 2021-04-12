@@ -17,7 +17,7 @@ if (!args[0]) {
       return message.channel.send(`**Mencione um usuario!**`)
 }
 
-        let bal = await db.fetch(`money_${message.guild.id}_${user.id}`);
+        let bal = await db.fetch(`money_${user.id}`);
         if(bal === null) bal = 0;
 
        message.channel.send(`*\`${user.user.tag}\`*, tem **${bal} ZoraMoedas**`)  
