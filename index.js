@@ -49,20 +49,16 @@ client.on('message', message => {
      if (!message.content.toLowerCase().startsWith(config.prefix.toLowerCase())) return;
      if (message.content.startsWith(`<@!${client.user.id}>`) || message.content.startsWith(`<@${client.user.id}>`)) return;
 
-    fs.readdir(`./commands/`, (error, files) => {
-    if (error) {return console.log("err");};
-    files.forEach(file => {
-        const command = require(`./commands/${file}`);
-        const commandName = file.split(".")[0];
+    const args = message.content
+        .trim().slice(config.prefix.length)
+        .split(/ +/g);
+    const command = args.shift().toLowerCase();
 
-        client.commands.set(commandName, command);
-
-        if (command.aliases) {
-            command.aliases.forEach(alias => {
-                client.aliases.set(alias, command);
-            });
-        };
-    });
+    try {
+        const commandFile = require(`./commands/${command}.js`)
+        commandFile.run(client, message, args);
+    } catch (err) {
+     }
 });
 
 client.on('message', message => {
@@ -80,4 +76,12 @@ client.on('message', message => {
 client.login(process.env.TOKEN); 
 console.log(`[CONECTADA] Zora Natasha#4439 foi conectada com sucesso ao Discord.`)  
 
-});
+client.ws.on('INTERACTION_CREATE', async interaction => {
+  // do stuff and respond here
+
+  client.api.interactions(interaction.id, interaction.token).callback.post({data: 
+{  type: 4, 
+ data: {    content: 'ping pong!'  }}})
+  
+  
+  })
