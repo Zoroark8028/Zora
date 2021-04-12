@@ -16,5 +16,5 @@ let money = db.all().filter(data => data.ID.startsWith(`money`)).sort((a, b) => 
         const embed = new Discord.MessageEmbed()
         .setColor("#ff0000")
         .addField(`<:lanchando:760219665933795409> **|** Top Burguêses de ZoraMoedas`, finalLb, false)
-        message.channel.send(embed);
+        message.channel.send(embed)
 }
