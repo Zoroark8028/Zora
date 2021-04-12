@@ -12,11 +12,6 @@ const fs = require("fs")
 const db = require("quick.db")
 const bot = new Discord.Client();    
 
-module.exports = 
-(client) => {
-  console.log(`[SERVER] estou em ${client.guilds.size} servers!`);
-}
-
 client.on("ready", () => {
 let avatar = [
 `https://cdn.glitch.com/93d6f45a-a737-47e8-8966-31894015e729%2F9a79cc19-82f8-4c35-9772-2009aba4e4d1.image.png?v=1614373229732`,  
@@ -82,6 +77,4 @@ client.ws.on('INTERACTION_CREATE', async interaction => {
   client.api.interactions(interaction.id, interaction.token).callback.post({data: 
 {  type: 4, 
  data: {    content: 'ping pong!'  }}})
-  
-  
   })
