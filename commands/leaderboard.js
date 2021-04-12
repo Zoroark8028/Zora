@@ -15,6 +15,6 @@ let money = db.all().filter(data => data.ID.startsWith(`money_${message.guild.id
         
         const embed = new Discord.MessageEmbed()
         .setColor("#ff0000")
-        .addField(`<:lanchando:760219665933795409> **|** Top Burguêses de ZoraMoedas`, finalLb, false)
+        .addField(`<:lanchando:760219665933795409> **|** Top Burguêses de ZoraMoedas`, finalLb, true)
         message.channel.send(embed);
 }
