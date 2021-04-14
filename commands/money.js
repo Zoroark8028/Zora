@@ -8,13 +8,9 @@ module.exports = {
     async run (client, message, args) {
 
 let user = message.mentions.members.first() ||  message.guild.members.cache.find(user => user.user.username.toLowerCase() === args.join(" ").toLowerCase()) ||
-    message.guild.members.cache.get(args[0]) || message.member;
+    message.guild.members.cache.get(args[0])
    
 if (!args[0]) {
-      return message.channel.send(`**Mencione um usuario!**`)
-}
-
-      if (!user) {
       return message.channel.send(`**Mencione um usuario!**`)
 }
 
