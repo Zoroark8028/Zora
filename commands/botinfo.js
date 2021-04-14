@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) => {
  .setColor("#ff0000")
  .setTitle("Informações sobre a Zora Natasha!")
  .setDescription(`
-🔷 **|** Oie, sou uma simples bot brasileira, o resto você conheçe.  
+🔷 **|** Oie, sou uma simples bot brasileira, que tem o objetivo divertir servidores do **Discord**, ajudar membros com tarefas comuns, deixar seu server mais divertido, se quiser comunicar com meu criador, ele sempre vai estar interagindo, conversando no server de suporte(mesmo que esteja bem morto)
 
 <:hihihi:763836612114513930> **|** Prefixo: **z.**
 
