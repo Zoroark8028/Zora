@@ -6,6 +6,8 @@ module.exports.run = async (bot, message, args, guilds) => {
   
  let user = message.mentions.users.first() || message.guild.members.cache.get(args[0])
 
+ let author = message.mentions.users.author()
+ 
   let member = db.fetch(`money_${message.author.id}`)
 
   let embed1 = new Discord.MessageEmbed()
@@ -14,6 +16,9 @@ module.exports.run = async (bot, message, args, guilds) => {
 
   if (!user) {
       return message.channel.send(`**Mencione alguem!**`)
+
+ if (!author) {
+      return message.channel.send(`**Você nao pode se mencionar!**`)
 }
 
   let embed2 = new Discord.MessageEmbed()
