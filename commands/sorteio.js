@@ -32,9 +32,13 @@ if (!args[0]) return message.channel.send(`Usagem Certa
     let Embed = new MessageEmbed()
       .setTitle(`Uau・Novo Sorteio!`)
       .setDescription(
-        `:tada:・Novo Sorteio Rolando! \n\n Com o premio: **${prize}**!
+        `:tada:・Premio: **${prize}**! 
 
-**Para participar clique no emoji abaixo e aguarde o resultado**`  
+<:cat_toes_coca:830956888871010314>・Patrocinador: **${message.author.tag}** 
+
+**Para participar clique no emoji abaixo e aguarde o resultado**
+
+`  
         
       )
       .setFooter(`Resultado Em:`) 
@@ -54,7 +58,7 @@ if (!args[0]) return message.channel.send(`Usagem Certa
         .users.cache.filter((u) => !u.bot)
         .random();
       channel.send(
-        `:tada:・E o vencedor do Sorteio "**${prize}**"" é o... **${winner}!** Parabéns!`
+        `:tada:・E o vencedor do Sorteio "**${prize}**" é o... **${winner}**! Parabéns!`
       ); 
     }, ms(args[0]));
   },
