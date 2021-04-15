@@ -26,8 +26,8 @@ client.on("ready", () => {
     let activities = [
       `Utilize ${config.prefix}ajuda para ver meus comandos!`,
       `Videos Do PauloCraft!`,
-      `Caçando bot do Dogão no Brawl Stars!`,
-      `"Dirigindo a ZoraFiat do canal ZoraStars"!`,
+      `Caçando bot da Belle Delphine no Brawl Stars!`,
+      `"Joguei brawl stars no pc (deu ruim)"!`,
 `Me faça perguntas usando ${config.prefix}zora!` 
     ],
     i = 0;
