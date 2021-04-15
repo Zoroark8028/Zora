@@ -12,7 +12,7 @@ module.exports.run = async (client, message, args) => {
     .setAuthor(`Ranking de ZoraMoedas!`)
     .setColor("#7289da")
     .setDescription(finalLb)
-    .setFooter('🔹 | Ranking')
+    .setFooter('Ranking')
     .setTimestamp()
     message.channel.send(embed);
 }
