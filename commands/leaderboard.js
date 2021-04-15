@@ -9,10 +9,10 @@ module.exports.run = async (client, message, args) => {
       finalLb += `**${money.indexOf(money[i])+1}. ${client.users.cache.get(money[i].ID.split('_')[1]) ? client.users.cache.get(money[i].ID.split('_')[1]).tag : "Usuario Desconhecido"}** - ${money[i].data} :dollar:\n`;
     }
     const embed = new Discord.MessageEmbed()
-    .setAuthor(`Leaderboard!`, message.guild.iconURL())
+    .setAuthor(`Ranking de ZoraMoedas!`)
     .setColor("#7289da")
     .setDescription(finalLb)
-    .setFooter(client.user.tag, client.user.displayAvatarURL())
+    .setFooter('Ranking')
     .setTimestamp()
     message.channel.send(embed);
 }
