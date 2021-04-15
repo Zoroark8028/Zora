@@ -5,8 +5,6 @@ const ms = require("parse-ms");
 module.exports.run = async (bot, message, args, guilds) => {
   
  let user = message.mentions.users.first() || message.guild.members.cache.get(args[0])
-
- let author = message.mentions.users.author()
  
   let member = db.fetch(`money_${message.author.id}`)
 
@@ -17,8 +15,6 @@ module.exports.run = async (bot, message, args, guilds) => {
   if (!user) {
       return message.channel.send(`**Mencione alguem!**`)
 
- if (!author) {
-      return message.channel.send(`**Você nao pode se mencionar!**`)
 }
 
   let embed2 = new Discord.MessageEmbed()
@@ -50,8 +46,7 @@ module.exports.run = async (bot, message, args, guilds) => {
 
   if (member < args[1]) {
       return message.channel.send(`*Você não tem ZoraMoedas o suficiente!*`)
-  }
-  
+   }
   let embed5 = new Discord.MessageEmbed()
   .setColor("GREEN")
   .setDescription(`🔷 ・ **Sucesso**, **${message.author.tag}** transferiu **${args[1]} ZoraMoedas** para **${user.tag}**!`);
