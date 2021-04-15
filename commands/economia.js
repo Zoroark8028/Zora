@@ -14,6 +14,8 @@ module.exports.run = async (client, message, args) => {
 
 **z.money** \n Verifica quantas ZoraMoedas a **PESSOA** mencionada tem
 
+**z.leaderboard** \n Mostra o ranking de ZoraMoedas
+
 `)
 .setFooter('Os {} são argumentos! Não utilize os no comando!')
 
