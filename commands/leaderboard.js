@@ -6,10 +6,10 @@ module.exports.run = async (client, message, args) => {
     money.length = 10;
     var finalLb = "";
     for (var i in money) {
-      finalLb += `**${money.indexOf(money[i])+1}. ${client.users.cache.get(money[i].ID.split('_')[1]) ? client.users.cache.get(money[i].ID.split('_')[1]).tag : "Usuario Offline"}** - ${money[i].data} \n`;
+      finalLb += `**${money.indexOf(money[i])+1}. ${client.users.cache.get(money[i].ID.split('_')[1]) ? client.users.cache.get(money[i].ID.split('_')[1]).tag : "Usuario Desconhecido"}** - ${money[i].data} :dollar:\n`;
     }
     const embed = new Discord.MessageEmbed()
-    .setAuthor(`<:cat_toes_coca:830956888871010314> | Ranking de ZoraMoedas!`)
+    .setAuthor(`Ranking de ZoraMoedas!`)
     .setColor("#7289da")
     .setDescription(finalLb)
     .setFooter('Ranking')
