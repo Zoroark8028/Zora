@@ -18,8 +18,17 @@ if (!args[0]) {
     .setFooter("Será que essa sugestão vale a pena?")
     .setTimestamp()
   );
+  var canal2 = message.guild.channels.cache.find(ch => ch.id === "821849042060836904");
+  const msg2 = await canal.send(
+    new Discord.MessageEmbed()
+      .setTitle(`Sugestão Enviada`)
+    .setDescription(`**Autor(a):** ${message.author.t}(\`${message.author.id}\`)
+    **Sugestão:** ${args.join(' ')}`)
+    .setColor('ff0000')
+    );
   await message.channel.send(`${message.author} a sugestão foi enviada com sucesso!`);
 
+    
   const emojis = ["👍", "👎"];
 
   for (const i in emojis) {
