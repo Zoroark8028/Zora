@@ -11,7 +11,7 @@ let user = message.mentions.members.first() ||  message.guild.members.cache.find
     message.guild.members.cache.get(args[0])
    
 if (!args[0]) {
-      return message.channel.send(`🔹 **|** , ${message.author}, se você quer ver a sua quantidade de ZoraMoedas, utilize **z.atm** `)
+      return message.channel.send(`🔹 ${message.author}, se você quer ver **~~a sua~~** quantidade de ZoraMoedas, utilize **z.atm** `)
 }
 
         let bal = await db.fetch(`money_${user.id}`);
