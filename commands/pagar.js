@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args, guilds) => {
   .setColor("RED")
   .setDescription(`**Mencione alguem!**`);
 
-  if (!args[0]) {
+  if (!user) {
       return message.channel.send(`🔹 ${message.author}, como paga o vento?`)
 
 }
@@ -50,7 +50,7 @@ module.exports.run = async (bot, message, args, guilds) => {
    }
   let embed5 = new Discord.MessageEmbed()
   .setColor("GREEN")
-  .setDescription(`🔷 ・ **Sucesso**, **${message.author.tag}** transferiu **${args[1]} ZoraMoedas** para **${user.tag}**!`);
+  .setDescription(`🔷 ・ **Sucesso**, **${message.author.tag}** transferiu **${args[1]} ZoraMoedas** para **${user}**!`);
  
 
 
