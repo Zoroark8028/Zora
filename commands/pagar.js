@@ -4,7 +4,8 @@ const ms = require("parse-ms");
 
 module.exports.run = async (bot, message, args, guilds) => {
   
- let user = message.mentions.users.first() || message.guild.members.cache.get(args[0])
+ let user = message.mentions.users.first() || message.guild.members.cache.find(user => user.user.username.toLowerCase() === args.join(" ").toLowerCase()) ||
+    message.guild.members.cache.get(args[0])
  
   let member = db.fetch(`money_${message.author.id}`)
 
@@ -12,7 +13,7 @@ module.exports.run = async (bot, message, args, guilds) => {
   .setColor("RED")
   .setDescription(`**Mencione alguem!**`);
 
-  if (!user) {
+  if (!args[0]) {
       return message.channel.send(`🔹 ${message.author}, como paga o vento?`)
 
 }
