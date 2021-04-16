@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args, guilds) => {
   .setDescription(`**Mencione alguem!**`);
 
   if (!user) {
-      return message.channel.send(`**Mencione alguem!**`)
+      return message.channel.send(`🔹 **|** ${message.author}, como paga o vento?`)
 
 }
 
@@ -29,7 +29,7 @@ module.exports.run = async (bot, message, args, guilds) => {
 
     const coinsToGive = args[1]
     if (isNaN(coinsToGive)) {
-      message.reply('*Por favor, coloque um número valido!*')
+      message.reply(`🔹 **|** $message.author, `)
      return  
 }
     let embed3 = new Discord.MessageEmbed()
