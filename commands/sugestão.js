@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 exports.run = async (client, message, args) => {
-message.delete();
+
 const content = args.join(" ");
 
 if (!args[0]) {
@@ -13,7 +13,8 @@ if (!args[0]) {
   const msg = await canal.send(
     new Discord.MessageEmbed()
     .setColor("BLUE")
-    .addField("Autor(a):", message.author)
+    .addField("Autor(a):", message.author,
+              ${message.author.id}`)
     .addField("Sugestão", content)
     .setFooter("Será que essa sugestão vale a pena?")
     .setTimestamp()
