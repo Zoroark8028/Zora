@@ -23,6 +23,12 @@ let questions = [
 
 },
 {
+    title: "Por que eu quero tar em mais servidores?",
+    options: ["para ser famosa", "divertir usuarios, com tarefas basicas,etc", "para ganhar dinheiro"],
+    correct: 2,
+
+},
+{
     title: "Qual o Melhor Bot?",
     options: ["Zora", "Zector", "Ractor", "Zorinho"],
     correct: 1,
