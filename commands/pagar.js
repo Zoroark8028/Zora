@@ -23,13 +23,13 @@ module.exports.run = async (bot, message, args, guilds) => {
 **z.pagar {menção} {quantidade}**`);
  
  if (!args[1]) {
-      return message.channel.send(`Usagem Correta
-**z.pagar {menção} {quantidade}**`)
+      return message.channel.send(`🔹 **|* ${message.author}, esqueceu de utilizar o comando de forma certa, né!
+      \`z.pagar {menção} {quantidade}\``)
 }
 
     const coinsToGive = args[1]
     if (isNaN(coinsToGive)) {
-      message.reply(`🔹 **|** $message.author, `)
+      message.channel.send(`🔹 **|** ${message.author}, cd o número? nn sei`)
      return  
 }
     let embed3 = new Discord.MessageEmbed()
@@ -38,14 +38,14 @@ module.exports.run = async (bot, message, args, guilds) => {
 
 
     if (message.content.includes('-')) { 
-      return message.channel.send(`*Você não pode usar dinheiro negativo!*`)
+      return message.channel.send(`🔹 **|** ${message.author}, você não pode usar dinheiro negativo, bobinho(a)!`)
   }
   let embed4 = new Discord.MessageEmbed()
   .setColor("RED")
   .setDescription(`*Você não tem ZoraMoedas o suficiente!*`);
 
   if (member < args[1]) {
-      return message.channel.send(`*Você não tem ZoraMoedas o suficiente!*`)
+      return message.channel.send(`🔹 **|** ${message.author}, como você vai pagar alguém com algo que você não tem? `)
    }
   let embed5 = new Discord.MessageEmbed()
   .setColor("GREEN")
@@ -53,7 +53,7 @@ module.exports.run = async (bot, message, args, guilds) => {
  
 
 
-  message.channel.send(`🔷 ・ **Sucesso**, **${message.author}** transferiu **${args[1]} ZoraMoedas** para **${user}**!`)
+  message.channel.send(`🔷 **|** **Sucesso**, **${message.author}**, você pagou **${args[1]} ZoraMoedas** para **${user}**!`)
   db.add(`money_${user.id}`, args[1])
   db.subtract(`money_${message.author.id}`, args[1])
 }
