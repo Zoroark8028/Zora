@@ -13,8 +13,7 @@ if (!args[0]) {
   const msg = await canal.send(
     new Discord.MessageEmbed()
     .setColor("BLUE")
-    .addField("Autor(a):", message.author,
-              ${message.author.id}`)
+    .addField("Autor(a):", message.author, message.author.id)
     .addField("Sugestão", content)
     .setFooter("Será que essa sugestão vale a pena?")
     .setTimestamp()

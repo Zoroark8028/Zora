@@ -11,8 +11,16 @@ module.exports = {
         let timeout =  43200000;
         let amount = Math.floor(Math.random() * 300) + 20;
 
+        var canal = message.guild.channels.cache.find(ch => ch.id === "829531198052761620");
+      
         let daily = await db.fetch(`daily_${user.id}`);
 
+      const msg = await canal.send(
+    new Discord.MessageEmbed()
+.setTitle("daily resgatado!")
+  .setDescription(`${message.author.tag} recebeu ${amount} em seu daily`)
+  );
+        
         if(daily !== null && timeout - (Date.now() - daily) > 0){
             let time = ms(timeout - (Date.now() - daily));
 
