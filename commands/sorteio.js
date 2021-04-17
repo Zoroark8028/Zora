@@ -32,11 +32,11 @@ if (!args[0]) return message.channel.send(`Usagem Certa
     let Embed = new MessageEmbed()
       .setTitle(`Uau・Novo Sorteio!`)
       .setDescription(
-        `:tada:・Premio: **${prize}**! 
+        `🔹 Premio: **${prize}** 
 
-<:cat_toes_coca:830956888871010314>・Patrocinador: **${message.author.tag}** 
+🔹 Patrocinador: **${message.author.tag}** 
 
-**Para participar clique no emoji abaixo e aguarde o resultado**
+**🔹 Para participar clique no emoji abaixo e aguarde o resultado**
 
 `  
         
