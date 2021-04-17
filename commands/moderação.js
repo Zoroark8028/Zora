@@ -9,6 +9,8 @@ module.exports.run = async (client, message, args) => {
 **z.anuncio** \n Anuncie um evento/novidade usando esse comando!
 
 **z.sorteio** \n Faça um sorteio usando o template, "z.sorteio 10m/10h/10d #canal-do-sorteio {premio}  
+
+**z.nuke** \n Deleta o canal e o cria denovo, perfeito para quando seu server acabou de ser raidado
 `)
 .setFooter('Os {} são argumentos! Não utilize os no comando!')
 
