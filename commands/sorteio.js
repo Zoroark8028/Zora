@@ -58,7 +58,7 @@ if (!args[0]) return message.channel.send(`Usagem Certa
         .users.cache.filter((u) => !u.bot)
         .random();
       channel.send(
-        `:tada:・E o vencedor do Sorteio "**${prize}**" é o... **${winner}**! Parabéns!`
+        `:tada:・E o vencedor do Sorteio "**${prize}**" é o... **${winner}!**`
       ); 
     }, ms(args[0]));
   },

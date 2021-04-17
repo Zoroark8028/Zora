@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) => {
  .setColor("BLUE")
  .setTitle("Server De Suporte ")
 .setDescription(`
-🔷 **|** Quer ver meu server de suporte 
+🔷 Quer ver meu server de suporte 
 para suas duvidas/sugestões/etc? 
 
 [Clique Aqui](https://discord.gg/epUJV7b45X) **para entrar em meu servidor!**`)
