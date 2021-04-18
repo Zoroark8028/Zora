@@ -6,21 +6,24 @@ exports.run = async (client, message, args) => {
     const help = new Discord.MessageEmbed()
    .setColor('BLUE')
     .setDescription(`
-    🔹\`z.e\`
+    
+ 🔹\`z.e\`
     Execute códigos dá libraria discord.js direto do discord!
     
     **Exemplos**
+ 🔹 \`z.e message.channel.send('Olá')\`
    
-    🔹 \`z.e message.channel.send    \`
+   **Permissões**
+ 🔹 \`Dono do bot\`
     
-    
+  
     `)
       
       
    let conteudo = args.join(" ");
  
  if(!conteudo) {
- return message.channel.send('**Coloque o código!**')
+ return message.channel.send(help)
  }
  
  let code = args.join(' ')
