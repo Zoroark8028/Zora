@@ -16,14 +16,15 @@ module.exports.run = async (bot, message, args, guilds) => {
       return message.channel.send(`🔹 ${message.author}, como paga o vento?`)
 
 }
-  let help = new Discord.MessageEmbed()
-  .setColor("BLUE")
-  .setTitle("Pagar")
-  .setDescription(`Pague uma pessoa que você goste com ZoraMoedas
-  \`z.pagar @webnamorada 1000\``);
+
+  let embed2 = new Discord.MessageEmbed()
+  .setColor("RED")
+  .setDescription(`Usagem Correta
+**z.pagar {menção} {quantidade}**`);
  
  if (!args[1]) {
-      return message.channel.send(help)
+      return message.channel.send(`🔹 ${message.author}, esqueceu de utilizar o comando de forma certa, né!
+      \`z.pagar {menção} {quantidade}\``)
 }
 
     const coinsToGive = args[1]
