@@ -44,10 +44,14 @@ client.on('message', message => {
      if (!message.content.toLowerCase().startsWith(config.prefix.toLowerCase())) return;
      if (message.content.startsWith(`<@!${client.user.id}>`) || message.content.startsWith(`<@${client.user.id}>`)) return;
 
+client.aliases = new Discord.Collection();
+
     const args = message.content
         .trim().slice(config.prefix.length)
         .split(/ +/g);
-    const command = args.shift().toLowerCase();
+    const commandName = args.shift().toLowerCase();
+ const command = client.commands.get(commandName)
+       || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 
     try {
         const commandFile = require(`./commands/${command}.js`)
