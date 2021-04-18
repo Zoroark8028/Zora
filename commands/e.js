@@ -8,7 +8,7 @@ const help = new Discord.MessageEmbed()
 .setTitle('Utilize z.ajuda para ver meus comandos!')    
 .setDescription(`
     
-**🔹 z. **
+**🔹 z.e **
 \`Execute códigos da libraria discord.js direto do discord!\`
 
 **🔹 Como Usar**    
