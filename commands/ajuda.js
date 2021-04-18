@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args) => {
 
 **Informativos**
 <:742756936050671706:771911635924418590> ・ ping, uptime, servericon, userinfo
-botinfo, serverinfo, avatar
+botinfo, avatar
 
 **Miscelânea**
 <:lanchando:760219665933795409> ・ suporte, convidar, zora, quiz`);

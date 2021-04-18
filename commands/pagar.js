@@ -24,15 +24,17 @@ const help = new Discord.MessageEmbed()
  
   let member = db.fetch(`money_${message.author.id}`)
 
-  if (!user) {
-      return message.reply(help)
-  }
+if (!user) {
+return message.reply(help)
+
+}
+  
  if (!args[1]) {
-       return message.reply(help)
+       return message.channel.send(`🔹 ${message.author}, cd o número? nn sei`)
  }
     const coinsToGive = args[1]
     if (isNaN(coinsToGive)) {
-      message.channel.send(`🔹 ${message.author}, cd o número? nn sei`)
+      message.channel.send(`🔹 ${message.author}, isso não é um número ou eu preciso de oculos?`)
      return  
     }
     if (message.content.includes('-')) { 
