@@ -10,6 +10,8 @@ module.exports.run = async (client, message, args) => {
 
 🔹 **|** Deixar seu server mais **divertido**, se quiser comunicar com meu criador, ele sempre vai estar interagindo, conversando no **server de suporte**\`(mesmo que esteja bem morto)\` <:cat_toes:830563413033877514>
 
+🔹 **|** Inspirações: **Loritta**
+
 <:hihihi:763836612114513930> **|** Prefixo: **z.**
 
 <:lanchando:760219665933795409> **|** Criador: **Zoroark#8028**

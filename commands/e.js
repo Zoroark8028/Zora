@@ -5,19 +5,21 @@ exports.run = async (client, message, args) => {
  
     const help = new Discord.MessageEmbed()
    .setColor('BLUE')
-    .setDescription(`
+.setTitle('Utilize z.ajuda para ver meus comandos!')    
+.setDescription(`
     
- 🔹\`z.e\`
-    Execute códigos dá libraria discord.js direto do discord!
-    
-    **Exemplos**
+ 🔹 **z.e**
+    \`Execute códigos dá libraria discord.js direto do discord!\`
+
+🔹 **Como Usar**    
+\`z.e {codigo}\`
+
+**Exemplos**
  🔹 \`z.e message.channel.send('Olá')\`
    
-   **Permissões**
+**Permissões**
  🔹 \`Dono do bot\`
-    
-  
-    `)
+`)
       
       
    let conteudo = args.join(" ");
