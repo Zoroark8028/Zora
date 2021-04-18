@@ -13,10 +13,9 @@ module.exports.run = async (bot, message, args, guilds) => {
   .setDescription(`**Mencione alguem!**`);
 
   if (!user) {
-      return message.channel.send(`🔹 ${message.author}, como paga o vento?`)
+      return message.channel.send(`🔹 ${message.author}, esqueceu de mencionar alguém`)
 
-}
-
+    }
   let embed2 = new Discord.MessageEmbed()
   .setColor("RED")
   .setDescription(`Usagem Correta
