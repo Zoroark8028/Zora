@@ -13,9 +13,10 @@ module.exports.run = async (bot, message, args, guilds) => {
   .setDescription(`**Mencione alguem!**`);
 
   if (!user) {
-      return message.channel.send(`🔹 ${message.author}, esqueceu de mencionar alguém`)
+      return message.channel.send(`🔹 ${message.author}, como paga o vento?`)
 
-    }
+}
+
   let embed2 = new Discord.MessageEmbed()
   .setColor("RED")
   .setDescription(`Usagem Correta
@@ -24,7 +25,8 @@ module.exports.run = async (bot, message, args, guilds) => {
  if (!args[1]) {
       return message.channel.send(`🔹 ${message.author}, esqueceu de utilizar o comando de forma certa, né!
       \`z.pagar {menção} {quantidade}\``)
-   
+}
+
     const coinsToGive = args[1]
     if (isNaN(coinsToGive)) {
       message.channel.send(`🔹 ${message.author}, cd o número? nn sei`)
