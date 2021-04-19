@@ -1,9 +1,6 @@
 const Discord = require("discord.js");
 
-module.exports = {
-	name: 'help',
-	aliases: ['commands'],
-execute(client, message, args) {
+	module.exports.run = async (client, message, args) => {
   const embed = new Discord.MessageEmbed()
     .setColor("#ff0000")
     .setTitle("Lista de comandos").setDescription(`
@@ -22,4 +19,3 @@ botinfo, avatar
 <:lanchando:760219665933795409> ・ suporte, convidar, zora, quiz`);
   message.channel.send(embed);
 }
-};

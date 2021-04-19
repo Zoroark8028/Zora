@@ -20,13 +20,12 @@ const help = new Discord.MessageEmbed()
     
 `)
 
- let user = message.mentions.users.first() || message.guild.members.cache.get(args[0]) ||  message.guild.members.cache.find(user => user.user.username.toLowerCase() === args.join(" ").toLowerCase())
+ let user = message.mentions.users.first() || message.guild.members.cache.get(args[0]) 
  
   let member = db.fetch(`money_${message.author.id}`)
 
 if (!user) {
 return message.reply(help)
-
 }
   
  if (!args[1]) {
@@ -37,11 +36,12 @@ return message.reply(help)
       message.channel.send(`🔹 ${message.author}, isso não é um número ou eu preciso de oculos?`)
      return  
     }
-    if (message.content.includes('-')) { 
+    
+  if (message.content.includes('-')) { 
       return message.channel.send(`🔹 ${message.author}, você não pode usar dinheiro negativo, bobinho(a)!`)
     }
   if (member < args[1]) {
-      return message.channel.send(`🔹 ${message.author}, como você vai pagar alguém com algo que você não tem? `)
+      return message.channel.send(`🔹 ${message.author}, como você vai pagar alguém com algo que você não tem?`)
   }
   message.channel.send(`🔹 **Sucesso**, **${message.author}**, você pagou **${args[1]} ZoraMoedas** para **${user}**!`)
   db.add(`money_${user.id}`, args[1])
