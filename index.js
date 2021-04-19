@@ -58,7 +58,8 @@ client.on('message', message => {
      }
 });
 
-client.on('message', message => {
+        
+  client.on('message', message => {
     if (message.content === '<@!803373957738528778>') {
         message.channel.send(':zap: ・ Oie, meu prefixo é **z.** , se precisar de qualquer ajuda, utilize **z.ajuda**');
     }

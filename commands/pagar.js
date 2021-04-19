@@ -8,7 +8,7 @@ const help = new Discord.MessageEmbed()
 .setTitle('Utilize z.ajuda para ver meus comandos!')    
 .setDescription(`
     
-**🔹z.pagar**
+**🔹 z.pagar**
 \`Dê Zoramoedas á alguém.\`
 
 **🔹 Como Usar**    

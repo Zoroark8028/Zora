@@ -2,6 +2,20 @@ const Discord = require('discord.js')
 
 module.exports.run = async (client, message, args) => {
 
+  const help = new Discord.MessageEmbed()
+   .setColor('BLUE')
+.setTitle('Utilize z.ajuda para ver meus comandos!')    
+.setDescription(`
+    
+**🔹 z.zora**
+\`Pergunte coisas á mim, qual será minha reação?\`
+
+**🔹 Como Usar**    
+\`z.zora {pergunta}\`
+
+**🔹 Exemplos**
+\`z.zora você é um bot?\``)
+  
   let responses = [
         "<:hihihi:763836612114513930>・Sim",
         "<:Leon_Shark_Triste:807662645326905366>・Não",
@@ -22,7 +36,7 @@ module.exports.run = async (client, message, args) => {
 
 Resposta: **${response}**`)
       .setFooter(`Autor(a) • ${message.author.tag}`)
-if(!args[0]) return message.reply("<:Bibi_Raiva:807663391144935484> | Por favor, coloque uma pergunta");
+if(!args[0]) return message.reply(help);
 
 message.channel.send(embed)
 }
