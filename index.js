@@ -10,8 +10,9 @@ const config = require("./config.json");
 const fs = require("fs")
 const db = require("quick.db") 
 
+3const client = new Discord.bot()
 client.aliases = new Discord.Collection();
-const client = new Discord.Client(); 
+client.commands = new Discord.Collecction();
 
 client.on("ready", () => {
 let avatar = [
