@@ -45,7 +45,6 @@ client.on('message', message => {
      if (message.content.startsWith(`<@!${client.user.id}>`) || message.content.startsWith(`<@${client.user.id}>`)) return;
 
 client.aliases = new Discord.Collection();
-  client.commands = new Discord.Collection()
 
     const args = message.content
         .trim().slice(config.prefix.length)
