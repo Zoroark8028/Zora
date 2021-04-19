@@ -6,13 +6,11 @@ app.get('/', function (req, res) {
 app.listen(3000)
 
 const Discord = require("discord.js"); 
+const client = new Discord.Client(); 
 const config = require("./config.json"); 
 const fs = require("fs")
-const db = require("quick.db") 
-
-3const client = new Discord.bot()
-client.aliases = new Discord.Collection();
-client.commands = new Discord.Collecction();
+const db = require("quick.db")
+const bot = new Discord.Client();    
 
 client.on("ready", () => {
 let avatar = [
@@ -46,10 +44,14 @@ client.on('message', message => {
      if (!message.content.toLowerCase().startsWith(config.prefix.toLowerCase())) return;
      if (message.content.startsWith(`<@!${client.user.id}>`) || message.content.startsWith(`<@${client.user.id}>`)) return;
 
-   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+client.aliases = new Discord.Collection();
 
+    const args = message.content
+        .trim().slice(config.prefix.length)
+        .split(/ +/g);
     const commandName = args.shift().toLowerCase();
- const command = client.commands.get(commandName) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+ const command = client.commands.get(commandName)
+       || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 
     try {
         const commandFile = require(`./commands/${command}.js`)
