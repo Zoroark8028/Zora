@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 const db = require("quick.db");
-const ms = require("parse-ms");
 
 module.exports.run = async (bot, message, args, guilds) => {
   
@@ -16,10 +15,8 @@ const help = new Discord.MessageEmbed()
 \`z.pagar {usuario} {quantidade}\`
 
 **🔹 Exemplos**
-\`z.pagar @Zoroark#8028 1000\`
-    
-`)
-
+\`z.pagar @Zoroark#8028 1000\``)
+   
  let user = message.mentions.users.first() || message.guild.members.cache.get(args[0]) 
  
   let member = db.fetch(`money_${message.author.id}`)
@@ -33,8 +30,7 @@ return message.reply(help)
  }
     const coinsToGive = args[1]
     if (isNaN(coinsToGive)) {
-      message.channel.send(`🔹 ${message.author}, isso não é um número ou eu preciso de oculos?`)
-     return  
+      return message.channel.send(`🔹 ${message.author}, isso não é um número ou eu preciso de oculos?`)
     }
     
   if (message.content.includes('-')) { 
@@ -46,9 +42,4 @@ return message.reply(help)
   message.channel.send(`🔹 **Sucesso**, **${message.author}**, você pagou **${args[1]} ZoraMoedas** para **${user}**!`)
   db.add(`money_${user.id}`, args[1])
   db.subtract(`money_${message.author.id}`, args[1])
-}
-
-module.exports.help = {
-  name:"pay",
-  aliases: ["pagar"]
 }
