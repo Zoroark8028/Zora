@@ -1,9 +1,12 @@
-exports.run = (client, message, args) => {
-  if(!args || args.length < 1) return message.reply("Must provide a command name to reload.");
+
+const Discord = require("discord.js");
+
+	module.exports.run = async (client, message, args) => {
+   if(!args || args.length < 1) return message.reply("coloque nome de um comando");
   const commandName = args[0];
   // Check if the command exists and is valid
   if(!client.commands.has(commandName)) {
-    return message.reply("That command does not exist");
+    return message.reply("Esse comando não existe");
   }
   // the path is relative to the *current folder*, so just ./filename.js
   delete require.cache[require.resolve(`./${commandName}.js`)];
@@ -11,5 +14,5 @@ exports.run = (client, message, args) => {
   client.commands.delete(commandName);
   const props = require(`./${commandName}.js`);
   client.commands.set(commandName, props);
-  message.reply(`The command ${commandName} has been reloaded`);
+  message.reply(`O comando ${commandName} foi carregado!`);
 };
