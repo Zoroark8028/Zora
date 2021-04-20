@@ -2,7 +2,8 @@ const Discord = require('discord.js')
 const db = require('quick.db');
 const ms = require('parse-ms');
 
-module.exports.run = async (client, message, args) => {
+module.exports.run = async (bot, message, args) => {
+  if(!message.content.startsWith('z.'))return;  
 
         let user = message.author;
         let timeout =  43200000;
@@ -10,7 +11,7 @@ module.exports.run = async (client, message, args) => {
       
         let daily = await db.fetch(`daily_${user.id}`);
         
-        if(daily !== null && timeout - (Date.now() - daily) > 0){
+        if(daily !== null && timeout - (Date.now() - daily) > 0) {
             let time = ms(timeout - (Date.now() - daily));
 
             return message.channel.send(`<:742758255276720259:771911664172793856> **|** ${message.author}, você ja coletou seu daily de hoje, resgate denovo em: \`**${time.hours} horas , ${time.minutes} minutos e ${time.seconds} segundos**`)
