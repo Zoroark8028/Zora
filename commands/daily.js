@@ -21,7 +21,7 @@ module.exports = {
             db.add(`money_${user.id}`, amount);
             db.set(`daily_${user.id}`, Date.now());
 
-return message.channel.send(`<:742756936050671706:771911635924418590> **|** ${message.author}, você recebeu **${amount} ZoraMoedas** em seu daily!`)
+message.channel.send(`<:742756936050671706:771911635924418590> **|** ${message.author}, você recebeu **${amount} ZoraMoedas** em seu daily!`)
         }
     }
   }
