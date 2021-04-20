@@ -12,6 +12,17 @@ const fs = require("fs")
 const db = require("quick.db")
 const bot = new Discord.Client();    
 
+client.on("guildMemberAdd", async (member) => { 
+
+  let guild = await client.guilds.cache.get("821563484617572352");
+  let channel = await client.channels.cache.get("821563484617572355")
+  if (guild != member.guild) {
+    return console.log("boas vindas!");
+   } else {
+channel.send(`**${member.user.username}** chegou no servidor, bora bater um papo, mas antes, não esqueça de ler as regras!`);
+  }
+});
+
 client.on("ready", () => {
 let avatar = [
 `https://cdn.glitch.com/93d6f45a-a737-47e8-8966-31894015e729%2F9a79cc19-82f8-4c35-9772-2009aba4e4d1.image.png?v=1614373229732`,  
