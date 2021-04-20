@@ -6,7 +6,7 @@ module.exports = {
      if(!message.member.permissions.has("ADMINISTRATOR"))return message.channel.send(`Somente pessoas com a permissão \`Administrador\` podem usar este comando!`)
       let reason = args.join(" ") || "motivo não definido"
         if(!message.channel.deletable) {
-            return message.reply("🔹 Esse canal não pode ser deletado!")
+            return message.reply("🔹 Esse canal não pode ser deletado!, talvez por que eu não tenho permissão.")
         }
         let newchannel = await message.channel.clone()
         await message.channel.delete()
