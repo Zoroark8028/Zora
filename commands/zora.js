@@ -20,7 +20,7 @@ let user = message.member;
   
   let responses = [
         "<:hihihi:763836612114513930>・Sim",
-"",
+"<:sadcat4:830263376667607080>・essa pergunta me deixou triste ",
         "<:Leon_Shark_Triste:807662645326905366>・Não",
         "<:Sandy_Joinha:807660320700760115>・Muito interresante",
         "<:lanchando:760219665933795409>・Que tal você ir estudar?",
