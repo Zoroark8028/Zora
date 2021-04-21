@@ -1,13 +1,13 @@
 const Discord = require('discord.js')
 const db = require('quick.db');
 const ms = require('parse-ms');
-
-exports.run = async (bot, message, argumentos, arg_texto, chat) => {
+    
+module.exports.run = async (message, client, args) => {
 
  let user = message.author;
         let timeout =  43200000;
         let amount = Math.floor(Math.random() * 300) + 20;
-      
+    
         let daily = await db.fetch(`daily_${user.id}`);
         
         if(daily !== null && timeout - (Date.now() - daily) > 0) {
@@ -20,4 +20,4 @@ exports.run = async (bot, message, argumentos, arg_texto, chat) => {
 
 message.channel.send(`<:742756936050671706:771911635924418590> **|** ${message.author}, você recebeu **${amount} ZoraMoedas** em seu daily!`)
         }
-    };
+    }
