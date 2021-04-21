@@ -2,8 +2,11 @@ const Discord = require('discord.js')
 const db = require('quick.db');
 const ms = require('parse-ms');
     
-module.exports.run = async (message, client, args) => {
+module.exports = {
+  name: aolyd,
+  description: alaj
 
+async run (message, client, args) => {
  let user = message.author;
         let timeout =  43200000;
         let amount = Math.floor(Math.random() * 300) + 20;
