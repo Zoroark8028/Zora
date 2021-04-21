@@ -10,6 +10,7 @@ const client = new Discord.Client();
 const config = require("./config.json"); 
 const fs = require("fs")
 const db = require("quick.db")
+const bot = new Discord.Client();    
 
 client.on("guildMemberAdd", async (member) => { 
 
@@ -53,8 +54,10 @@ client.on('message', message => {
      if (message.channel.type == 'dm') return;
      if (!message.content.toLowerCase().startsWith(config.prefix.toLowerCase())) return;
      if (message.content.startsWith(`<@!${client.user.id}>`) || message.content.startsWith(`<@${client.user.id}>`)) return;
+
+  client.commands = new .Collection()
   
-   const args = message.content
+  const args = message.content
         .trim().slice(config.prefix.length)
         .split(/ +/g);
     const command = args.shift().toLowerCase();

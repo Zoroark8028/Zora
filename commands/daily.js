@@ -27,5 +27,5 @@ module.exports = {
         `🔹 ${message.author} você pegou seu daily, e recebeu **${amount} ZoraMoedas!**`
       );
     }
-}
   }
+};
