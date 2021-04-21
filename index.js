@@ -19,7 +19,7 @@ client.on("guildMemberAdd", async (member) => {
   if (guild != member.guild) {
     return console.log("boas vindas!");
    } else {
-channel.send(`**${member.user}** chegou no servidor, bora bater um papo, mas antes, não esqueça de ler as regras!`);
+channel.send(`**${member.user}** entrou no **Quartel da Zora**, vamos bater um papo com ele? Mas antes, não esqueça de **ler as regras!**`);
   }
 });
 

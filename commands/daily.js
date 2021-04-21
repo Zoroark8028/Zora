@@ -2,10 +2,9 @@ const Discord = require('discord.js')
 const db = require('quick.db');
 const ms = require('parse-ms');
 
-module.exports.run = async (bot, message, args) => {
-  if(!message.content.startsWith('z.'))return;  
+exports.run = async (client, message, args) => {
 
-        let user = message.author;
+ let user = message.author;
         let timeout =  43200000;
         let amount = Math.floor(Math.random() * 300) + 20;
       
@@ -21,10 +20,4 @@ module.exports.run = async (bot, message, args) => {
 
 message.channel.send(`<:742756936050671706:771911635924418590> **|** ${message.author}, você recebeu **${amount} ZoraMoedas** em seu daily!`)
         }
-    };
-
-module.exports.help = {
-  name:"daily",
-  aliases: ["day"]
-}
-  
+    }
