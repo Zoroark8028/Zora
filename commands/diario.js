@@ -4,7 +4,7 @@ const ms = require("parse-ms");
 
 module.exports = {
   name: "daily",
-  description: "Aqui está o seu daily .username",
+description: "Aqui está o seu daily .username",
 
   async run(client, message, args) {
     let user = message.author;
