@@ -2,7 +2,7 @@ const Discord = require('discord.js')
 const db = require('quick.db');
 const ms = require('parse-ms');
 
-exports.run = async (client, message, args) => {
+exports.run = async (bot, message, argumentos, arg_texto, chat) => {
 
  let user = message.author;
         let timeout =  43200000;
@@ -20,4 +20,4 @@ exports.run = async (client, message, args) => {
 
 message.channel.send(`<:742756936050671706:771911635924418590> **|** ${message.author}, você recebeu **${amount} ZoraMoedas** em seu daily!`)
         }
-    }
+    };
