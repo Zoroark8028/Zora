@@ -8,9 +8,6 @@ const Discord = require("discord.js");
 **Moderativos** - {z.moderação}
 <:hihihi:763836612114513930> ・ anuncio, sorteio, nuke
  
-**Economia** - {z.economia}
-<:stonks:690245363566903333> ・ atm, money, daily, pagar, leaderboard
-
 **Informativos**
 <:742756936050671706:771911635924418590> ・ ping, uptime, servericon, userinfo
 botinfo, avatar
