@@ -55,6 +55,9 @@ client.on('message', message => {
      if (!message.content.toLowerCase().startsWith(config.prefix.toLowerCase())) return;
      if (message.content.startsWith(`<@!${client.user.id}>`) || message.content.startsWith(`<@${client.user.id}>`)) return
   
+let user = db.get(`blacklist_${message.author.id}`);
+  if(user == true) return;
+
   const args = message.content
         .trim().slice(config.prefix.length)
         .split(/ +/g);
