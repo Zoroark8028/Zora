@@ -19,6 +19,7 @@ let user = message.member;
 \`z.zora você é um bot?\``)
   
   let responses = [
+"<:cat_toes_coca:830956888871010314>・Tanto faz.",
         "<:hihihi:763836612114513930>・Sim",
 "<:sadcat4:830263376667607080>・essa pergunta me deixou triste ",
         "<:Leon_Shark_Triste:807662645326905366>・Não",
