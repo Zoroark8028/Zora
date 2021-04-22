@@ -28,7 +28,7 @@ let user = message.member;
 "<:Shelly_Bruxa_Feliz:807667755885133884>・Zora Aprova!",
    "<:El_Brown_Amor:807662132048035840>・Faz sentido.",
             "<:Rico_Assustado:807655918606090281>・hm, pensando bem, eu nunca pensei nisto!",
-"<:tatonamesa:758494052777197608>・..., serio?","<:cat_toes_coca:830956888871010314>・Legal",'a'];
+"<:tatonamesa:758494052777197608>・... serio?","<:cat_toes_coca:830956888871010314>・Legal",'a'];
       let response =
         responses[Math.floor(Math.random() * responses.length - 1)];
       const embed = new Discord.MessageEmbed()
