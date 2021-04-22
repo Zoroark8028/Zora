@@ -58,6 +58,8 @@ client.on('message', message => {
 let user = db.get(`blacklist_${message.author.id}`);
   if(user == true) return;
 
+  let arquivos = files.filter(f => f.split(".").pop() === "js")
+
   fs.readdir("./comandos/", (err, files) => {
   let arqs = files.filter(f => f.split(".").pop() === "js")
   
