@@ -58,6 +58,8 @@ client.on('message', message => {
 let user = db.get(`blacklist_${message.author.id}`);
   if(user == true) return;
 
+client.aliases = new Discord.Collection()
+
   const args = message.content
         .trim().slice(config.prefix.length)
         .split(/ +/g);
