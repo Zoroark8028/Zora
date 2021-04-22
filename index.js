@@ -58,18 +58,22 @@ client.on('message', message => {
 let user = db.get(`blacklist_${message.author.id}`);
   if(user == true) return;
 
-  const args = message.content
-        .trim().slice(config.prefix.length)
-        .split(/ +/g);
-    const command = args.shift().toLowerCase();
-    try {
-        const commandFile = require(`./commands/${command}.js`)
-        commandFile.run(client, message, args);
-    } catch (err) {
-console.error('Erro: ' + err);
-     }
-});
-
+  fs.readdir("./comandos/", (err, files) => {
+  let arqs = files.filter(f => f.split(".").pop() === "js")
+  
+client.alias = new Discord.Collection();
+client.commands = new Discord.Collection()
+  
+  arqs.forEach((f, i) => {
+    let props = require(`./commands/${f}`)
+    bot.commands.set(props.nome, props)
+    props.alias.forEach(alias => {
+      bot.alias.set(alias, props.nome);
+    })
+  })
+  
+})
+})
         
   client.on('message', message => {
     if (message.content === '<@!803373957738528778>') {
