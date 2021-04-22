@@ -12,6 +12,6 @@ exports.run = async(client, message, args) => {
       message.channel.send(`🔹 ${user} entrou na **blacklist**, ninguem mandou quebrar as regras, seu boboca!`);
     }else{ 
       return message.channel.send(`🔹 ${message.author}, esse usuario já está na blacklist.`);
-console.log(`${message.author.tag} colocou blacklist em ${user.user.tag}`)
+return console.log(`${message.author.tag} colocou blacklist em ${user.user.tag}`);
     }
 }
