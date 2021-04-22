@@ -5,7 +5,7 @@ exports.run = async (client, message, args) => {
 
  let embed = new Discord.MessageEmbed()
  .setColor("BLUE")
- .setDescription("**<:stonks:690245363566903333> | Ícone do servidor **")
+ .setDescription("**🔹 Ícone do servidor **")
  .setImage(message.guild.iconURL({ dynamic: true, format: 'png', size: 1024}))
 
  message.channel.send(embed);
