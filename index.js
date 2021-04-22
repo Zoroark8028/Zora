@@ -58,19 +58,10 @@ client.on('message', message => {
 let user = db.get(`blacklist_${message.author.id}`);
   if(user == true) return;
 
-client.aliases = new Discord.Collection()
-client.commands = new Discord.Collection();
-
   const args = message.content
         .trim().slice(config.prefix.length)
         .split(/ +/g);
-    const commandName = args.shift().toLowerCase();
-const command = client.commands.get(commandName)
-        || client.commands.find(command => command.aliases && command.aliases.includes(commandName));
-
- if(!command) return message.reply(`\`${command}\` Não é um comando valido!`);
-
- client.commands.set(commandName, command);
+    const command = args.shift().toLowerCase();
     try {
         const commandFile = require(`./commands/${command}.js`)
         commandFile.run(client, message, args);
