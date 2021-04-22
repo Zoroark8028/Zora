@@ -12,8 +12,7 @@ exports.run = async (client, message, args) => {
 
 };
 
-exports.conf = {
- enabled: true, 
+exports.conf = {d: true, 
  guildOnly: true, 
  aliases: ["svicon", "servericon",],
  permLevel: 0 
