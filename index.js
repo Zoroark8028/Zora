@@ -58,26 +58,12 @@ client.on('message', message => {
 let user = db.get(`blacklist_${message.author.id}`);
   if(user == true) return;
 
- client.aliases = new Discord.Collection()
-client.commands = new Discord.Collection()
-
-const commandFolders = fs.readdirSync('./commands');
-for (const folder of commandFolders) {
-	const commandFiles = fs.readdirSync(`./commands/${folder}`).filter(file => file.endsWith('.js'));
-	for (const file of commandFiles) {
-		const command = require(`./commands/${folder}/${file}`);
-		client.commands.set(command.name, command);
-	}
-}
-
   const args = message.content
         .trim().slice(config.prefix.length)
         .split(/ +/g);
- const commandName = args.shift().toLowerCase();
-const command2 = client.commands.get(commandName);
-
+    const command = args.shift().toLowerCase();
     try {
-        const commandFile = require(`./commands/${command2}.js`)
+        const commandFile = require(`./commands/${command}.js`)
         commandFile.run(client, message, args);
     } catch (err) {
 console.error('Erro: ' + err);
