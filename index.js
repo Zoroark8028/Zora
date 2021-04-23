@@ -74,10 +74,10 @@ for (const folder of commandFolders) {
         .trim().slice(config.prefix.length)
         .split(/ +/g);
  const commandName = args.shift().toLowerCase();
-const command = client.commands.get(commandName);
+const command2 = client.commands.get(commandName);
 
     try {
-        const commandFile = require(`./commands/${command}.js`)
+        const commandFile = require(`./commands/${command2}.js`)
         commandFile.run(client, message, args);
     } catch (err) {
 console.error('Erro: ' + err);
