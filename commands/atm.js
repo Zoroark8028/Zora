@@ -14,7 +14,7 @@ let user = message.member;
         if(bal === null) bal = 0;
 
 
-       message.channel.send(`${user}, você tem **${bal} ZoraMoedas**`)  
+       message.channel.send(`🔹 ${user}, você tem **${bal} ZoraMoedas**`)  
     
     }
 }

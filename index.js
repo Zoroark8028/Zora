@@ -53,7 +53,6 @@ client.on('message', message => {
      if (message.author.bot) return;
      if (message.channel.type == 'dm') return;
      if (!message.content.toLowerCase().startsWith(config.prefix.toLowerCase())) return;
-     if (message.content.startsWith(`<@!${client.user.id}>`) || message.content.startsWith(`<@${client.user.id}>`)) return;
      if (message.content.startsWith(`<@!${client.user.id}>`) || message.content.startsWith(`<@${client.user.id}>`)) return
   
 let user = db.get(`blacklist_${message.author.id}`);
@@ -71,8 +70,6 @@ let user = db.get(`blacklist_${message.author.id}`);
 console.error('Erro: ' + err);
      }
 });
-
-client.on('message', message => {
         
   client.on('message', message => {
     if (message.content === '<@!803373957738528778>') {
@@ -88,4 +85,3 @@ client.on('message', message => {
 
 client.login(process.env.TOKEN); 
 console.log(`[CONECTADA] Zora Natasha#4439 foi conectada com sucesso ao Discord.`)  
-})
