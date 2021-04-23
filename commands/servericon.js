@@ -5,14 +5,15 @@ exports.run = async (client, message, args) => {
 
  let embed = new Discord.MessageEmbed()
  .setColor("BLUE")
- .setDescription("**🔹 Ícone do servidor **")
+ .setDescription("**<:stonks:690245363566903333> | Ícone do servidor **")
  .setImage(message.guild.iconURL({ dynamic: true, format: 'png', size: 1024}))
 
  message.channel.send(embed);
 
 };
 
-exports.conf = {d: true, 
+exports.conf = {
+ enabled: true, 
  guildOnly: true, 
  aliases: ["svicon", "servericon",],
  permLevel: 0 
