@@ -8,13 +8,8 @@ module.exports.run = async (bot, message, args, guilds) => {
  
   let member = db.fetch(`money_${message.author.id}`)
 
-  let embed1 = new Discord.MessageEmbed()
-  .setColor("RED")
-  .setDescription(`**Mencione alguem!**`);
-
   if (!user) {
       return message.channel.send(`🔹 ${message.author}, como paga o vento?`)
-
 }
 
   let embed2 = new Discord.MessageEmbed()
