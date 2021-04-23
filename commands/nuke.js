@@ -7,13 +7,15 @@ module.exports = {
       let reason = args.join(" ") || "motivo não definido"
         if(!message.channel.deletable) {
             return message.reply("Esse canal não pode ser deletado!")
+            return message.channel.send(`🔹 ${message.author}, Esse canal não pode ser deletado, talvez por que eu não tenho permissão.`)
         }
         let newchannel = await message.channel.clone()
         await message.channel.delete()
         let embed = new MessageEmbed()
-        .setTitle("Canal Explodido")
+        .setTitle("Canal Recriado!")
         .setColor('BLUE')
-        .setDescription(reason)
+        .setDescription(`**Motivo:** \`${reason}\``)
+        .setFooter(`Moderador(a): ${message.author.tag}`, message.author.displayAvatarURL({format: "png"}));
         await newchannel.send(embed)
     }
 }
