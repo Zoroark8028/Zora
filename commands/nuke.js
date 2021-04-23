@@ -11,9 +11,10 @@ module.exports = {
         let newchannel = await message.channel.clone()
         await message.channel.delete()
         let embed = new MessageEmbed()
-        .setTitle("Canal Explodido")
+        .setTitle("Canal Recriado!")
         .setColor('BLUE')
-        .setDescription(reason)
+        .setDescription(`**Motivo:** \`${reason}\``)
+        .setFooter(`Moderador(a): ${message.author.tag}`, message.author.displayAvatarURL({format: "png"}));
         await newchannel.send(embed)
     }
 }

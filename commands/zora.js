@@ -39,7 +39,7 @@ let user = message.member;
  .setDescription(`Pergunta: **${args.join(' ')}**
 
 Resposta: **${response}**`)
-      .setFooter(`Autor(a) • ${message.author.tag}`)
+      .setFooter(`Autor(a) • ${message.author.tag}`, message.author.displayAvatarURL({format: "png"}))
 if(!args[0]) return message.reply(help);
 
 message.channel.send(embed)
