@@ -16,7 +16,7 @@ module.exports = {
         if(daily !== null && timeout - (Date.now() - daily) > 0){
             let time = ms(timeout - (Date.now() - daily));
 
-            return message.channel.send(`<:742758255276720259:771911664172793856> **|** ${message.author}, você ja coletou seu daily de hoje, resgate denovo em: \`${time.hours} horas , ${time.minutes} minutos e ${time.seconds} segundos.\``)
+            return message.channel.send(`<:742758255276720259:771911664172793856> **|** ${message.author}, você ja coletou seu daily de hoje, resgate denovo em: **${time.hours} horas , ${time.minutes} minutos e ${time.seconds} segundos.**`)
         } else {
             db.add(`money_${user.id}`, amount);
             db.set(`daily_${user.id}`, Date.now());
