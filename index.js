@@ -58,10 +58,14 @@ client.on('message', message => {
 let user = db.get(`blacklist_${message.author.id}`);
   if(user == true) return;
 
+client.aliases = new Discor
+
   const args = message.content
         .trim().slice(config.prefix.length)
         .split(/ +/g);
-    const command = args.shift().toLowerCase();
+    const commandName = args.shift().toLowerCase();
+const command = client.commands.get(commandName)
+      || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
     try {
         const commandFile = require(`./commands/${command}.js`)
         commandFile.run(client, message, args);
