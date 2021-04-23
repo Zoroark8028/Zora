@@ -58,7 +58,8 @@ client.on('message', message => {
 let user = db.get(`blacklist_${message.author.id}`);
   if(user == true) return;
 
-client.aliases = new Discor
+client.aliases = new Discord.Collection()
+client.commands = new Discord.Collection()
 
   const args = message.content
         .trim().slice(config.prefix.length)
@@ -66,15 +67,11 @@ client.aliases = new Discor
     const commandName = args.shift().toLowerCase();
 const command = client.commands.get(commandName)
       || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
-    try {
-        const commandFile = require(`./commands/${command}.js`)
-        commandFile.run(client, message, args);
-    } catch (err) {
-console.error('Erro: ' + err);
-     }
-});
+    if (!command) return;
 
-        
+
+      
+  
   client.on('message', message => {
     if (message.content === '<@!803373957738528778>') {
         message.channel.send(':zap: ・ Oie, meu prefixo é **z.** , se precisar de qualquer ajuda, utilize **z.ajuda**');
