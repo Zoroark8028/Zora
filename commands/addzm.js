@@ -9,7 +9,11 @@ module.exports.run = async (bot, message, args) => {
 
   let member = db.fetch(`money_${message.author.id}`)
 
-  message.channel.send(`🔷 ${message.author.username} deu **${args[1]} ZoraMoedas** para ${user}.`)
+   let embed = new Discord.MessageEmbed()
+  .setColor("GREEN")
+  .setDescription(`${message.author.username} deu **${args[1]} ZoraMoedas** para ${user.user.username}.`);
+
+  message.channel.send(embed)
   db.add(`money_${user.id}`, args[1])
 }
 
