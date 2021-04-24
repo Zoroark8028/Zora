@@ -14,7 +14,7 @@ module.exports = {
         .setTitle("Canal Recriado!")
         .setColor('BLUE')
         .setDescription(`**Motivo:** \`${reason}\``)
-        .setFooter(`Moderador(a): ${message.author.ag}`l`($message.author.tag})\``, message.author.displayAvatarURL({format: "png"}));
+        .setFooter(`Moderador(a): ${message.author.tag}(${message.author.id})`, message.author.displayAvatarURL({format: "png"}));
         await newchannel.send(embed)
     }
 }
