@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 
 exports.run = async (client, message, args) => {
- if(!['803363145921462272', '583408510184718336', '674656385656422411'].includes(message.author.id)) return;
+ if(!['803363145921462272'].includes(message.author.id)) return;
      
 const help = new Discord.MessageEmbed()
    .setColor('BLUE')
