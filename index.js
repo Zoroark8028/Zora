@@ -24,16 +24,6 @@ channel.send(`**${member.user}** entrou no **Quartel da Zora**, vamos bater um p
 });
 
 client.on("ready", () => {
-let avatar = [
-`https://cdn.glitch.com/93d6f45a-a737-47e8-8966-31894015e729%2F9a79cc19-82f8-4c35-9772-2009aba4e4d1.image.png?v=1614373229732`,  
-`https://cdn.glitch.com/93d6f45a-a737-47e8-8966-31894015e729%2Fed32dd11-8eb1-4c85-ad6e-1bde99a34367.image.png?v=1615946715933`
-],
-i = 0;
-setInterval( () => client.user.setAvatar(`${avatar[i++ % avatar.length]}`, {
-}), 5000 * 60);
- });
-
-client.on("ready", () => {
     let activities = [
       `Utilize ${config.prefix}ajuda para ver meus comandos!`,
       `Videos Do PauloCraft!`,
