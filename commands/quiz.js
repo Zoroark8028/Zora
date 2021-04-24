@@ -22,11 +22,6 @@ let questions = [
     correct: 5,
 
 },
-{
-    title: "Qual o Melhor Bot?",
-    options: ["Zora", "Zector", "Ractor", "Zorinho"],
-    correct: 1,
-  },
    {
     title: "Qual o mais famoso?",
     options: ["Nelipe Feto", "Enaldinho", "Loritta", "Pelé"],
@@ -42,12 +37,6 @@ let questions = [
     title: "Se eu pudesse escolher um bolo, qual seria?",
     options: ["Eu lá vou saber", "Bolo Rosa", "Bolo de Sorvete", "Bolo de chocolate"],
     correct: 2,
-  },
-
- {
-    title: "Meu Irmão é o...",
-    options: ["Zorinho, claro", "Zector", "ZoRoArK", "Nau tem, tu é um bot "],
-    correct: 1,
   },
 ];
 
